@@ -9,9 +9,9 @@ class ThemeConfig {
     Color(0xFFBD6207),
   ];
   static const List<Color> darkOrangeGradient = [
-    Color(0xFFFC4408),
-    Color(0xFFFB7619),
-    Color(0xFFFDBB31),
+    Color(0xFFFEA06D),
+    Color(0xFFFF5B02),
+    Color(0xFFFF5900),
   ];
   static const List<Color> greyGradient = [
     Color(0xFFB5B5B5),
@@ -19,7 +19,7 @@ class ThemeConfig {
   ];
   // Neutral Colors
   static const Color white = Color(0xFFFFFFFF);
-  static const Color iceWhite = Color(0xFFEEF8F7);
+  static const Color iceWhite = Color(0xFFDEDEDE);
   static const Color grey = Color(0xFF666666);
   static const Color darkGrey = Color(0xFF444444);
   static const Color black = Color(0xFF000000);

@@ -20,7 +20,6 @@ class PrimaryButton extends StatelessWidget {
     return Container(
       height: 48.0,
       decoration: BoxDecoration(
-        color: ThemeConfig.iceWhite,
         borderRadius: _borderRadius,
         gradient: LinearGradient(
           begin: Alignment.topCenter,
@@ -36,7 +35,7 @@ class PrimaryButton extends StatelessWidget {
         child: Align(
           child: Text(
             text,
-            style: TextStyles.mediumText18.copyWith(
+            style: CustomTextStyles.mediumText18.copyWith(
               color: ThemeConfig.white,
             ),
           ),

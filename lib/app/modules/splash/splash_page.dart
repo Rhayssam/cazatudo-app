@@ -20,7 +20,8 @@ class SplashPage extends StatelessWidget {
           children: [
             Text(
               'CAZATUDO',
-              style: TextStyles.bigText.copyWith(color: ThemeConfig.white),
+              style:
+                  CustomTextStyles.bigText.copyWith(color: ThemeConfig.white),
             ),
             CustomCircularProgressIndicator()
           ],
