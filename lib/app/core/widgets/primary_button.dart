@@ -1,42 +1,42 @@
-import 'package:cazatudo_app/app/core/ui/text_styles.dart';
-import 'package:cazatudo_app/app/core/ui/theme_config.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
-class PrimaryButton extends StatelessWidget {
-  final VoidCallback? onPressed;
-  final String text;
+import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
+import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 
-  const PrimaryButton({
+class PrimaryButton extends StatelessWidget {
+  final VoidCallback onPressed;
+  final String text;
+  PrimaryButton({
     Key? key,
-    this.onPressed,
+    required this.onPressed,
     required this.text,
   }) : super(key: key);
 
-  final BorderRadius _borderRadius =
-      const BorderRadius.all(Radius.circular(24.0));
-
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 48.0,
-      decoration: BoxDecoration(
-        borderRadius: _borderRadius,
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: onPressed != null
-              ? ThemeConfig.darkOrangeGradient
-              : ThemeConfig.greyGradient,
+    return Material(
+      borderRadius: BorderRadius.all(Radius.circular(38.0)),
+      child: Ink(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(38.0)),
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: ThemeConfig.orangeGradient,
+          ),
         ),
-      ),
-      child: InkWell(
-        borderRadius: _borderRadius,
-        onTap: onPressed,
-        child: Align(
-          child: Text(
-            text,
-            style: CustomTextStyles.mediumText18.copyWith(
-              color: ThemeConfig.white,
+        child: InkWell(
+          borderRadius: BorderRadius.all(Radius.circular(38.0)),
+          onTap: onPressed,
+          child: Container(
+            alignment: Alignment.center,
+            height: 64,
+            decoration: BoxDecoration(),
+            child: Text(
+              text,
+              style: CustomTextStyles.mediumText18
+                  .copyWith(color: ThemeConfig.white),
             ),
           ),
         ),

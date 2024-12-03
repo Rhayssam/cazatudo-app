@@ -1,5 +1,6 @@
-import 'package:cazatudo_app/app/core/ui/text_styles.dart';
+import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
+import 'package:cazatudo_app/app/core/widgets/multi_text_button.dart';
 import 'package:cazatudo_app/app/core/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -52,11 +53,28 @@ class OnboardPage extends StatelessWidget {
                         bottom: 4.0,
                       ),
                       child: PrimaryButton(
-                        text: 'Vamos Lá!',
                         onPressed: () {
                           Get.toNamed('/signIn');
                         },
+                        text: 'Vamos Lá!',
                       ),
+                    ),
+                    MultiTextButton(
+                      onPressed: () {
+                        Get.toNamed('/signUp');
+                      },
+                      children: [
+                        Text(
+                          'Ainda não possui uma conta? ',
+                          style: CustomTextStyles.smallText
+                              .copyWith(color: ThemeConfig.grey),
+                        ),
+                        Text(
+                          'Criar Conta!',
+                          style: CustomTextStyles.smallText
+                              .copyWith(color: ThemeConfig.orange),
+                        )
+                      ],
                     ),
                   ],
                 ),
