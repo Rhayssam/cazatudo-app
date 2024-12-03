@@ -1,12 +1,42 @@
 import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
+import 'package:cazatudo_app/app/core/widgets/custom_circular_progress_indicator.dart';
 import 'package:cazatudo_app/app/core/widgets/multi_text_button.dart';
 import 'package:cazatudo_app/app/core/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:video_player/video_player.dart';
 
-class OnboardPage extends StatelessWidget {
+class OnboardPage extends StatefulWidget {
   const OnboardPage({super.key});
+
+  @override
+  State<OnboardPage> createState() => _OnboardPageState();
+}
+
+class _OnboardPageState extends State<OnboardPage> {
+  late VideoPlayerController _videoPlayerController;
+  Future<void>? _initializeVideoPlayerFuture;
+
+  @override
+  void initState() {
+    _videoPlayerController =
+        VideoPlayerController.asset('assets/videos/video_intro.mp4')
+          ..initialize().then((_) {
+            _videoPlayerController.play();
+          });
+
+    _initializeVideoPlayerFuture = _videoPlayerController.initialize();
+    _videoPlayerController.setLooping(true);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    // _videoPlayerController.pause();
+    _videoPlayerController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +46,21 @@ class OnboardPage extends StatelessWidget {
           Expanded(
             flex: 65,
             child: Container(
-              color: ThemeConfig.darkGrey,
-              child: const Center(
-                child: Text(
-                  'Imagem ou video do instagram das lojas',
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+              child: Center(
+                child: FutureBuilder(
+                  future: _initializeVideoPlayerFuture,
+                  builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.done) {
+                      return AspectRatio(
+                        aspectRatio: _videoPlayerController.value.aspectRatio,
+                        child: VideoPlayer(_videoPlayerController),
+                      );
+                    } else {
+                      return Center(
+                        child: CustomCircularProgressIndicator(),
+                      );
+                    }
+                  },
                 ),
               ),
             ),
