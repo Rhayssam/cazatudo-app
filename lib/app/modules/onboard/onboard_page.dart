@@ -15,27 +15,25 @@ class OnboardPage extends StatefulWidget {
 }
 
 class _OnboardPageState extends State<OnboardPage> {
-  late VideoPlayerController _videoPlayerController;
-  Future<void>? _initializeVideoPlayerFuture;
+  late VideoPlayerController videoPlayerController;
 
   @override
   void initState() {
-    _videoPlayerController =
-        VideoPlayerController.asset('assets/videos/video_intro.mp4')
-          ..initialize().then((_) {
-            _videoPlayerController.play();
-          });
-
-    _initializeVideoPlayerFuture = _videoPlayerController.initialize();
-    _videoPlayerController.setLooping(true);
     super.initState();
+    _initPlayer();
   }
 
-  @override
-  void dispose() {
-    // _videoPlayerController.pause();
-    _videoPlayerController.dispose();
-    super.dispose();
+  void _initPlayer() async {
+    videoPlayerController = VideoPlayerController.asset(
+        'assets/videos/video_intro2.mp4',
+        videoPlayerOptions: VideoPlayerOptions(mixWithOthers: true))
+      ..initialize().then((_) {});
+
+    setState(() {
+      videoPlayerController.play();
+      videoPlayerController.setVolume(0);
+      videoPlayerController.setLooping(true);
+    });
   }
 
   @override
@@ -46,23 +44,8 @@ class _OnboardPageState extends State<OnboardPage> {
           Expanded(
             flex: 65,
             child: Container(
-              child: Center(
-                child: FutureBuilder(
-                  future: _initializeVideoPlayerFuture,
-                  builder: (context, snapshot) {
-                    if (snapshot.connectionState == ConnectionState.done) {
-                      return AspectRatio(
-                        aspectRatio: _videoPlayerController.value.aspectRatio,
-                        child: VideoPlayer(_videoPlayerController),
-                      );
-                    } else {
-                      return Center(
-                        child: CustomCircularProgressIndicator(),
-                      );
-                    }
-                  },
-                ),
-              ),
+              // height: 600,
+              child: VideoPlayer(videoPlayerController),
             ),
           ),
           Expanded(

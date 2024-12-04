@@ -17,6 +17,7 @@ class PrimaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       borderRadius: BorderRadius.all(Radius.circular(38.0)),
+      elevation: 0,
       child: Ink(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(38.0)),
