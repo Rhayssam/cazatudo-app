@@ -1,11 +1,17 @@
-import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
-import 'package:cazatudo_app/app/core/ui/theme_config.dart';
-import 'package:cazatudo_app/app/core/widgets/custom_circular_progress_indicator.dart';
-import 'package:cazatudo_app/app/core/widgets/multi_text_button.dart';
-import 'package:cazatudo_app/app/core/widgets/primary_button.dart';
+// Essenciais
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+// UI
+import 'package:cazatudo_app/app/core/ui/theme_config.dart';
+import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
+
+// Extensões Pub.dev
 import 'package:video_player/video_player.dart';
+
+// Widgets Personalizados
+import 'package:cazatudo_app/app/core/widgets/multi_text_button.dart';
+import 'package:cazatudo_app/app/core/widgets/primary_button.dart';
 
 class OnboardPage extends StatefulWidget {
   const OnboardPage({super.key});

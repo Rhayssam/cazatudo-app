@@ -1,6 +1,9 @@
-import 'package:cazatudo_app/app/core/ui/theme_config.dart';
+// Essenciais
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+// UI
+import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 
 class CustomCircularProgressIndicator extends StatelessWidget {
   final Color? color;

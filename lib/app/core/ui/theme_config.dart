@@ -1,3 +1,4 @@
+// Essenciais
 import 'package:flutter/material.dart';
 
 class ThemeConfig {

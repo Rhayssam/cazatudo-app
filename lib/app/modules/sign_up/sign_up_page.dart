@@ -1,9 +1,14 @@
-import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
-import 'package:cazatudo_app/app/core/ui/theme_config.dart';
-import 'package:cazatudo_app/app/core/widgets/multi_text_button.dart';
-import 'package:cazatudo_app/app/core/widgets/primary_button.dart';
+// Essenciais
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+// UI
+import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
+import 'package:cazatudo_app/app/core/ui/theme_config.dart';
+
+// Widgets Personalizados
+import 'package:cazatudo_app/app/core/widgets/multi_text_button.dart';
+import 'package:cazatudo_app/app/core/widgets/primary_button.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});

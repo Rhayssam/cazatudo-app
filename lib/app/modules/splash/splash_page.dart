@@ -1,7 +1,12 @@
-import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
-import 'package:cazatudo_app/app/core/ui/theme_config.dart';
-import 'package:cazatudo_app/app/core/widgets/custom_circular_progress_indicator.dart';
+// Essenciais
 import 'package:flutter/material.dart';
+
+// UI
+import 'package:cazatudo_app/app/core/ui/theme_config.dart';
+import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
+
+// Widgets Personalizados
+import 'package:cazatudo_app/app/core/widgets/custom_circular_progress_indicator.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
