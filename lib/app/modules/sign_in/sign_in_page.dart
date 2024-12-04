@@ -27,8 +27,8 @@ class _SignInPageState extends State<SignInPage> {
           Text(
             'Bem vindo de volta!',
             textAlign: TextAlign.center,
-            style:
-                CustomTextStyles.mediumText.copyWith(color: ThemeConfig.orange),
+            style: CustomTextStyles.mediumText
+                .copyWith(color: ThemeConfig.orange1),
           ),
           const SizedBox(
             height: 20,
@@ -73,7 +73,7 @@ class _SignInPageState extends State<SignInPage> {
                     Text(
                       'Criar Conta',
                       style: CustomTextStyles.smallText
-                          .copyWith(color: ThemeConfig.orange),
+                          .copyWith(color: ThemeConfig.orange1),
                     ),
                   ],
                 ),

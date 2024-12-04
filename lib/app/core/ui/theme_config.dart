@@ -18,6 +18,11 @@ class ThemeConfig {
     Color(0xFFB5B5B5),
     Color(0xFF7F7F7F)
   ];
+
+  // Background
+  static const Color background = Color(0xFFF6f4fa);
+  static const Color mainColor = Color(0xFFFF5900);
+
   // Neutral Colors
   static const Color white = Color(0xFFFFFFFF);
   static const Color iceWhite = Color(0xFFDEDEDE);
@@ -26,5 +31,5 @@ class ThemeConfig {
   static const Color black = Color(0xFF000000);
 
   // Colors
-  static const Color orange = Color(0xFFF16C04);
+  static const Color orange1 = Color(0xFFF16C04);
 }

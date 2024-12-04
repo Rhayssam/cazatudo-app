@@ -28,8 +28,8 @@ class _SignUpPageState extends State<SignUpPage> {
           Text(
             'Faça seu Cadastro!',
             textAlign: TextAlign.center,
-            style:
-                CustomTextStyles.mediumText.copyWith(color: ThemeConfig.orange),
+            style: CustomTextStyles.mediumText
+                .copyWith(color: ThemeConfig.orange1),
           ),
           const SizedBox(
             height: 20,
@@ -74,7 +74,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     Text(
                       'Faça Login',
                       style: CustomTextStyles.smallText
-                          .copyWith(color: ThemeConfig.orange),
+                          .copyWith(color: ThemeConfig.orange1),
                     ),
                   ],
                 ),

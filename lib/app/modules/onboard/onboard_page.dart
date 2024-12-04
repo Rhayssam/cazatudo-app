@@ -43,6 +43,11 @@ class _OnboardPageState extends State<OnboardPage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
@@ -50,7 +55,6 @@ class _OnboardPageState extends State<OnboardPage> {
           Expanded(
             flex: 65,
             child: Container(
-              // height: 600,
               child: VideoPlayer(videoPlayerController),
             ),
           ),
@@ -67,12 +71,12 @@ class _OnboardPageState extends State<OnboardPage> {
                     Text(
                       'Móveis e Decoração',
                       style: CustomTextStyles.mediumText
-                          .copyWith(color: ThemeConfig.orange),
+                          .copyWith(color: ThemeConfig.orange1),
                     ),
                     Text(
                       'de A a Z',
                       style: CustomTextStyles.mediumText24
-                          .copyWith(color: ThemeConfig.orange),
+                          .copyWith(color: ThemeConfig.orange1),
                     ),
                     Padding(
                       padding: EdgeInsets.only(
@@ -83,7 +87,7 @@ class _OnboardPageState extends State<OnboardPage> {
                       ),
                       child: PrimaryButton(
                         onPressed: () {
-                          Get.toNamed('/signIn');
+                          Get.toNamed('/home');
                         },
                         text: 'Vamos Lá!',
                       ),
@@ -101,7 +105,7 @@ class _OnboardPageState extends State<OnboardPage> {
                         Text(
                           'Criar Conta!',
                           style: CustomTextStyles.smallText
-                              .copyWith(color: ThemeConfig.orange),
+                              .copyWith(color: ThemeConfig.orange1),
                         )
                       ],
                     ),
