@@ -1,5 +1,6 @@
 // Essenciais
 import 'package:cazatudo_app/app/modules/home/banner_widget.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,21 @@ class _HomePageState extends State<HomePage> {
       //* Início da tela
       body: SafeArea(
           child: CustomScrollView(
-        slivers: [BannerWidget(pageController: _controlPage)],
+        slivers: [
+          BannerWidget(
+            pageController: _controlPage,
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+              child: Text(
+                'Novidades',
+                style: CustomTextStyles.mediumText20
+                    .copyWith(color: ThemeConfig.orange1),
+              ),
+            ),
+          )
+        ],
       )),
     );
   }

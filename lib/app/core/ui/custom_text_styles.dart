@@ -19,10 +19,20 @@ class CustomTextStyles {
     fontSize: 24.0,
     fontWeight: FontWeight.w700,
   );
+  static const TextStyle mediumText20 = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 20.0,
+    fontWeight: FontWeight.w700,
+  );
   static const TextStyle mediumText18 = TextStyle(
     fontFamily: 'Inter',
     fontSize: 18.0,
     fontWeight: FontWeight.w600,
+  );
+  static const TextStyle smallTextBottomNavBar = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 12.0,
+    fontWeight: FontWeight.w500,
   );
   static const TextStyle smallText = TextStyle(
     fontFamily: 'Inter',

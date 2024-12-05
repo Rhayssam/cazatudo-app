@@ -33,4 +33,5 @@ class ThemeConfig {
 
   // Colors
   static const Color orange1 = Color(0xFFF16C04);
+  static const Color lightOrange = Color(0xFFFFC3A3);
 }

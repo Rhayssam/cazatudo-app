@@ -1,5 +1,10 @@
 // Essenciais
 import 'package:cazatudo_app/app/modules/cart/cart_page.dart';
+import 'package:cazatudo_app/app/modules/categories/categories_page.dart';
+import 'package:cazatudo_app/app/modules/favorite/favorite_page.dart';
+import 'package:cazatudo_app/app/modules/home/navigation_screen.dart';
+import 'package:cazatudo_app/app/modules/notifies/notification_page.dart';
+import 'package:cazatudo_app/app/modules/profile/profile_page.dart';
 import 'package:cazatudo_app/app/modules/search/search_page.dart';
 import 'package:get/get.dart';
 
@@ -40,6 +45,26 @@ class AppPages {
     GetPage(
       name: AppRoutes.cart,
       page: () => CartPage(),
+    ),
+    GetPage(
+      name: AppRoutes.categories,
+      page: () => CategoriesPage(),
+    ),
+    GetPage(
+      name: AppRoutes.favorites,
+      page: () => FavoritePage(),
+    ),
+    GetPage(
+      name: AppRoutes.notification,
+      page: () => NotificationPage(),
+    ),
+    GetPage(
+      page: () => ProfilePage(),
+      name: AppRoutes.profile,
+    ),
+    GetPage(
+      name: AppRoutes.navigation,
+      page: () => NavigationScreen(),
     ),
   ];
 }

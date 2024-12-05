@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
 
-// Extensões Pub.dev
+// Extensões
 import 'package:video_player/video_player.dart';
 
 // Widgets Personalizados
@@ -87,7 +87,7 @@ class _OnboardPageState extends State<OnboardPage> {
                       ),
                       child: PrimaryButton(
                         onPressed: () {
-                          Get.toNamed('/home');
+                          Get.toNamed('/navigation');
                         },
                         text: 'Vamos Lá!',
                       ),
