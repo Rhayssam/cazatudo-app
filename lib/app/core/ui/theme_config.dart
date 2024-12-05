@@ -27,6 +27,7 @@ class ThemeConfig {
   static const Color white = Color(0xFFFFFFFF);
   static const Color iceWhite = Color(0xFFDEDEDE);
   static const Color grey = Color(0xFF666666);
+  static const Color lightGrey = Color(0xFF9B9B9B);
   static const Color darkGrey = Color(0xFF444444);
   static const Color black = Color(0xFF000000);
 

@@ -1,4 +1,5 @@
 // Essenciais
+import 'package:cazatudo_app/app/modules/search/search_page.dart';
 import 'package:get/get.dart';
 
 // Rotas
@@ -30,6 +31,10 @@ class AppPages {
     GetPage(
       name: AppRoutes.home,
       page: () => HomePage(),
+    ),
+    GetPage(
+      name: AppRoutes.search,
+      page: () => SearchPage(),
     ),
   ];
 }
