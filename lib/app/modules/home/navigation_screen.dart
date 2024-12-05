@@ -1,12 +1,16 @@
-import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
+// Essenciais
+import 'package:flutter/material.dart';
+
+// UI
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
+import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
+
+// Páginas
 import 'package:cazatudo_app/app/modules/categories/categories_page.dart';
 import 'package:cazatudo_app/app/modules/favorite/favorite_page.dart';
 import 'package:cazatudo_app/app/modules/home/home_page.dart';
 import 'package:cazatudo_app/app/modules/notifies/notification_page.dart';
 import 'package:cazatudo_app/app/modules/profile/profile_page.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class NavigationScreen extends StatefulWidget {
   const NavigationScreen({super.key});
