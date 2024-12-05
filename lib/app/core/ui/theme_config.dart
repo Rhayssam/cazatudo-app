@@ -20,7 +20,7 @@ class ThemeConfig {
   ];
 
   // Background
-  static const Color background = Color(0xFFF6f4fa);
+  static const Color background = Color(0xFFEEEEEE);
   static const Color mainColor = Color(0xFFFF5900);
 
   // Neutral Colors
