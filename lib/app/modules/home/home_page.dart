@@ -25,14 +25,14 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: ThemeConfig.orange1,
         automaticallyImplyLeading: false,
-        title: InkWell(
-          onTap: () {
-            Get.toNamed(AppRoutes.search);
-          },
-          child: Row(
-            children: [
-              Expanded(
-                flex: 8,
+        title: Row(
+          children: [
+            Expanded(
+              flex: 8,
+              child: InkWell(
+                onTap: () {
+                  Get.toNamed(AppRoutes.search);
+                },
                 child: Container(
                   height: 40,
                   decoration: BoxDecoration(
@@ -61,11 +61,16 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              const SizedBox(
-                width: 10,
-              ),
-              Expanded(
-                flex: 1,
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Expanded(
+              flex: 1,
+              child: InkWell(
+                onTap: () {
+                  Get.toNamed(AppRoutes.cart);
+                },
                 child: Container(
                   height: 50,
                   decoration: BoxDecoration(
@@ -78,8 +83,8 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
       //TODO Externalizar a AppBar

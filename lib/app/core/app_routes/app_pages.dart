@@ -1,4 +1,5 @@
 // Essenciais
+import 'package:cazatudo_app/app/modules/cart/cart_page.dart';
 import 'package:cazatudo_app/app/modules/search/search_page.dart';
 import 'package:get/get.dart';
 
@@ -35,6 +36,10 @@ class AppPages {
     GetPage(
       name: AppRoutes.search,
       page: () => SearchPage(),
+    ),
+    GetPage(
+      name: AppRoutes.cart,
+      page: () => CartPage(),
     ),
   ];
 }
