@@ -26,23 +26,62 @@ class _HomePageState extends State<HomePage> {
       appBar: CustomAppBar(),
       //* Início da tela
       body: SafeArea(
-          child: CustomScrollView(
-        slivers: [
-          BannerWidget(
-            pageController: _controlPage,
-          ),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-              child: Text(
-                'Novidades',
-                style: CustomTextStyles.mediumText20
-                    .copyWith(color: ThemeConfig.orange1),
+        child: CustomScrollView(
+          slivers: [
+            BannerWidget(
+              pageController: _controlPage,
+            ),
+            SliverToBoxAdapter(
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                child: Text(
+                  'Novidades',
+                  style: CustomTextStyles.mediumText20
+                      .copyWith(color: ThemeConfig.orange1),
+                ),
               ),
             ),
-          )
-        ],
-      )),
+            SliverPadding(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              sliver: SliverGrid(
+                delegate: SliverChildBuilderDelegate((context, index) {
+                  return Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: ThemeConfig.lightOrange,
+                      boxShadow: [
+                        BoxShadow(
+                          color: ThemeConfig.lightGrey,
+                          offset: Offset(3, 1),
+                          blurRadius: 10,
+                        ),
+                      ],
+                    ),
+                    child: Stack(
+                      children: [
+                        Center(
+                          child: Text(
+                            'Produto',
+                            style: CustomTextStyles.smallText16
+                                .copyWith(color: ThemeConfig.white),
+                          ),
+                        )
+                      ],
+                    ),
+                  );
+                }, childCount: 6),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisExtent: 300,
+                  mainAxisSpacing: 20,
+                  crossAxisSpacing: 10,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

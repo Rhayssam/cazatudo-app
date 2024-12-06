@@ -15,7 +15,7 @@ class CustomCircularProgressIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(
-      Duration(seconds: 2),
+      Duration(seconds: 3),
       () {
         Get.offNamed('/initial');
       },

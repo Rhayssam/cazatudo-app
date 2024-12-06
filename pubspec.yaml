@@ -66,6 +66,10 @@ flutter:
     # Images
     - assets/images/p1.png
     - assets/images/signUp.png
+    - assets/images/picture_icon.png
+    
+    
+
     # Videos
     - assets/videos/video_intro1.mp4
     - assets/videos/video_intro2.mp4

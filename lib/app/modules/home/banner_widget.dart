@@ -59,7 +59,9 @@ Widget _buildAdContainer(String text) {
     child: Center(
       child: Text(
         'Colocar anúncio ou oferta',
-        style: CustomTextStyles.mediumText18.copyWith(color: ThemeConfig.white),
+        style: CustomTextStyles.mediumText18.copyWith(
+          color: ThemeConfig.white,
+        ),
       ),
     ),
   );

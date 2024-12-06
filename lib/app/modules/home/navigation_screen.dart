@@ -59,23 +59,38 @@ class _NavigationScreenState extends State<NavigationScreen> {
           onTap: navigationTapped,
           items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Icon(
+                Icons.home,
+                size: 30,
+              ),
               label: 'Início',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.category),
+              icon: Icon(
+                Icons.category,
+                size: 30,
+              ),
               label: 'Categorias',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.favorite),
+              icon: Icon(
+                Icons.favorite,
+                size: 30,
+              ),
               label: 'Favoritos',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.notifications),
+              icon: Icon(
+                Icons.notifications,
+                size: 30,
+              ),
               label: 'Notificações',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person),
+              icon: Icon(
+                Icons.person,
+                size: 30,
+              ),
               label: 'Minha Conta',
             ),
           ],
