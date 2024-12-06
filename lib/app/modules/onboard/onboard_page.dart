@@ -89,7 +89,7 @@ class _OnboardPageState extends State<OnboardPage> {
                         onPressed: () {
                           Get.toNamed('/navigation');
                         },
-                        text: 'Vamos Lá!',
+                        text: 'Vamos Lá! ',
                       ),
                     ),
                     MultiTextButton(
