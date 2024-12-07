@@ -19,6 +19,11 @@ class CustomTextStyles {
     fontSize: 24.0,
     fontWeight: FontWeight.w700,
   );
+  static const TextStyle mediumText23 = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 23.0,
+    fontWeight: FontWeight.w700,
+  );
   static const TextStyle mediumText20 = TextStyle(
     fontFamily: 'Inter',
     fontSize: 20.0,
@@ -38,6 +43,11 @@ class CustomTextStyles {
     fontFamily: 'Inter',
     fontSize: 14.0,
     fontWeight: FontWeight.w500,
+  );
+  static const TextStyle smallText12 = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 12.0,
+    fontWeight: FontWeight.w600,
   );
   static const TextStyle smallText16 = TextStyle(
     fontFamily: 'Inter',

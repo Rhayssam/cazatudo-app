@@ -18,70 +18,135 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-  final _formKey = GlobalKey<FormState>();
-
+  final email = TextEditingController();
+  FocusNode emailF = FocusNode();
+  final password = TextEditingController();
+  FocusNode passwordF = FocusNode();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
+      backgroundColor: ThemeConfig.background,
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            SizedBox(
+              width: 96,
+              height: 100,
+            ),
+            Center(
+              child: Image.asset('assets/images/cazatudo_logo_recort.png'),
+            ),
+            SizedBox(height: 120),
+            CustomTextField(email, Icons.email, 'Email', emailF),
+            SizedBox(height: 15),
+            CustomTextField(password, Icons.lock, 'Senha', passwordF),
+            SizedBox(height: 10),
+            ForgotPassword(),
+            SizedBox(height: 10),
+            PrimaryButton(),
+            SizedBox(height: 10),
+            CriarConta()
+          ],
+        ),
+      ),
+    );
+  }
+
+  Padding CriarConta() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'Faça seu Cadastro!',
-            textAlign: TextAlign.center,
-            style: CustomTextStyles.mediumText
-                .copyWith(color: ThemeConfig.orange1),
+            'Não possui uma conta? ',
+            style: CustomTextStyles.smallText12.copyWith(
+              color: ThemeConfig.grey,
+            ),
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          Image.asset(
-            'assets/images/signUp.png',
-            height: 180,
-            width: 415,
-          ),
-          Form(
-            key: _formKey,
-            child: Column(
-              children: [
-                TextFormField(
-                  decoration: InputDecoration(
-                    labelText: 'Exemplo',
-                    border: OutlineInputBorder(),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(
-                    left: 32.0,
-                    right: 32.0,
-                    top: 16.0,
-                    bottom: 4.0,
-                  ),
-                  child: PrimaryButton(
-                    onPressed: () {},
-                    text: 'Criar Conta',
-                  ),
-                ),
-                MultiTextButton(
-                  onPressed: () {
-                    Get.toNamed('/signIn');
-                  },
-                  children: [
-                    Text(
-                      'Já possui conta? ',
-                      style: CustomTextStyles.smallText
-                          .copyWith(color: ThemeConfig.grey),
-                    ),
-                    Text(
-                      'Faça Login',
-                      style: CustomTextStyles.smallText
-                          .copyWith(color: ThemeConfig.orange1),
-                    ),
-                  ],
-                ),
-              ],
+          Text(
+            'Crie agora!',
+            style: CustomTextStyles.smallText12.copyWith(
+              color: ThemeConfig.orange1,
             ),
           )
         ],
+      ),
+    );
+  }
+
+  Widget PrimaryButton() {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 10),
+      child: Container(
+        alignment: Alignment.center,
+        width: double.infinity,
+        height: 44,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: ThemeConfig.orangeGradient,
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Text(
+          'Login',
+          style:
+              CustomTextStyles.mediumText20.copyWith(color: ThemeConfig.white),
+        ),
+      ),
+    );
+  }
+
+  Widget ForgotPassword() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: Text(
+        'Esqueceu a sua senha?',
+        style:
+            CustomTextStyles.smallText12.copyWith(color: ThemeConfig.orange1),
+      ),
+    );
+  }
+
+  Widget CustomTextField(TextEditingController controller, IconData icon,
+      String type, FocusNode focusNode) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: Container(
+        height: 44,
+        decoration: BoxDecoration(
+          color: ThemeConfig.white,
+          borderRadius: BorderRadius.circular(5),
+        ),
+        child: TextField(
+          style:
+              CustomTextStyles.mediumText18.copyWith(color: ThemeConfig.grey),
+          controller: controller,
+          focusNode: focusNode,
+          decoration: InputDecoration(
+              hintText: type,
+              prefixIcon: Icon(
+                icon,
+                color: focusNode.hasFocus
+                    ? ThemeConfig.orange1
+                    : ThemeConfig.lightGrey,
+              ),
+              contentPadding: EdgeInsets.symmetric(
+                horizontal: 15,
+                vertical: 15,
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide(color: ThemeConfig.lightGrey, width: 2),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide(color: ThemeConfig.orange1, width: 2),
+              )),
+        ),
       ),
     );
   }
