@@ -1,6 +1,5 @@
 // Essenciais
 import 'package:cazatudo_app/app/core/widgets/custom_primary_button.dart';
-import 'package:cazatudo_app/app/core/widgets/custom_text_button.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_text_field.dart';
 import 'package:cazatudo_app/app/core/widgets/multi_text_button.dart';
 import 'package:flutter/material.dart';
