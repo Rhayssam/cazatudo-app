@@ -1,7 +1,12 @@
-import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
-import 'package:cazatudo_app/app/core/ui/theme_config.dart';
+// Essenciais
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+// Rotas
+import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
+
+// UI
+import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 
 class CustomAppBarCart extends StatelessWidget {
   const CustomAppBarCart({

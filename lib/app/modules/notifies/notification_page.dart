@@ -1,7 +1,12 @@
-import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
-import 'package:cazatudo_app/app/core/ui/theme_config.dart';
-import 'package:cazatudo_app/app/core/widgets/custom_app_bar.dart';
+// Essenciais
 import 'package:flutter/material.dart';
+
+// UI
+import 'package:cazatudo_app/app/core/ui/theme_config.dart';
+import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
+
+// Widgets Personalizados
+import 'package:cazatudo_app/app/core/widgets/custom_app_bar.dart';
 
 class NotificationPage extends StatelessWidget {
   const NotificationPage({super.key});

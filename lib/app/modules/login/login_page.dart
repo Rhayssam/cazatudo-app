@@ -1,7 +1,7 @@
 // Essenciais
-import 'package:cazatudo_app/app/core/widgets/custom_primary_button.dart';
-import 'package:cazatudo_app/app/core/widgets/multi_text_button.dart';
+import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 // UI
 import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
@@ -10,7 +10,8 @@ import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 // Widgets Personalizados
 import 'package:cazatudo_app/app/core/widgets/custom_text_field.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_text_button.dart';
-import 'package:get/get.dart';
+import 'package:cazatudo_app/app/core/widgets/custom_primary_button.dart';
+import 'package:cazatudo_app/app/core/widgets/multi_text_button.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -66,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
             Center(
               child: MultiTextButton(
                 onPressed: () {
-                  Get.toNamed('signUp');
+                  Get.toNamed(AppRoutes.signUp);
                 },
                 children: [
                   Text(
