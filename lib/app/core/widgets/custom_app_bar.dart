@@ -22,7 +22,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               child: Container(
                 height: 40,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(23),
+                  borderRadius: BorderRadius.circular(10),
                   color: ThemeConfig.white,
                 ),
                 child: Row(

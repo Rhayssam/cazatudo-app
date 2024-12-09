@@ -1,36 +1,29 @@
 // Essenciais
 import 'package:cazatudo_app/app/core/widgets/custom_primary_button.dart';
-import 'package:cazatudo_app/app/core/widgets/custom_text_button.dart';
-import 'package:cazatudo_app/app/core/widgets/custom_text_field.dart';
 import 'package:cazatudo_app/app/core/widgets/multi_text_button.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 // UI
 import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 
-class SignUpPage extends StatefulWidget {
-  const SignUpPage({super.key});
+// Widgets Personalizados
+import 'package:cazatudo_app/app/core/widgets/custom_text_field.dart';
+import 'package:cazatudo_app/app/core/widgets/custom_text_button.dart';
+import 'package:get/get.dart';
+
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
   @override
-  State<SignUpPage> createState() => _SignUpPageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _SignUpPageState extends State<SignUpPage> {
-  // Controllers
-  final name = TextEditingController();
-  FocusNode nameF = FocusNode();
-
+class _LoginPageState extends State<LoginPage> {
   final email = TextEditingController();
   FocusNode emailF = FocusNode();
-
   final password = TextEditingController();
   FocusNode passwordF = FocusNode();
-
-  final passwordConfirm = TextEditingController();
-  FocusNode passwordConfirmF = FocusNode();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,13 +41,6 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
             SizedBox(height: 120),
             CustomTextField(
-              controller: name,
-              icon: Icons.person,
-              type: 'Nome',
-              focusNode: nameF,
-            ),
-            SizedBox(height: 15),
-            CustomTextField(
               controller: email,
               icon: Icons.email,
               type: 'Email',
@@ -67,32 +53,30 @@ class _SignUpPageState extends State<SignUpPage> {
               type: 'Senha',
               focusNode: passwordF,
             ),
-            SizedBox(height: 15),
-            CustomTextField(
-              controller: passwordConfirm,
-              icon: Icons.lock,
-              type: 'Confirmar Senha',
-              focusNode: passwordConfirmF,
+            SizedBox(height: 10),
+            CustomTextButton(
+              onPressed: () {},
+              text: 'Esqueceu sua senha?',
             ),
-            SizedBox(height: 15),
+            SizedBox(height: 10),
             CustomPrimaryButton(
-              text: 'Criar Conta',
+              text: 'Login',
             ),
             SizedBox(height: 10),
             Center(
               child: MultiTextButton(
                 onPressed: () {
-                  Get.toNamed('login');
+                  Get.toNamed('signUp');
                 },
                 children: [
                   Text(
-                    'Já possui uma conta? ',
+                    'Não possui uma conta? ',
                     style: CustomTextStyles.smallText12.copyWith(
                       color: ThemeConfig.grey,
                     ),
                   ),
                   Text(
-                    'Faça login!',
+                    'Crie agora!',
                     style: CustomTextStyles.smallText12.copyWith(
                       color: ThemeConfig.orange1,
                     ),
@@ -102,6 +86,29 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget CriarConta() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Não possui uma conta? ',
+            style: CustomTextStyles.smallText12.copyWith(
+              color: ThemeConfig.grey,
+            ),
+          ),
+          Text(
+            'Crie agora!',
+            style: CustomTextStyles.smallText12.copyWith(
+              color: ThemeConfig.orange1,
+            ),
+          ),
+        ],
       ),
     );
   }

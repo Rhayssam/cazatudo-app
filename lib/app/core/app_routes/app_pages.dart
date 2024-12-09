@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
 import 'package:cazatudo_app/app/modules/home/home_page.dart';
 import 'package:cazatudo_app/app/modules/onboard/onboard_page.dart';
-import 'package:cazatudo_app/app/modules/sign_in/sign_in_page.dart';
+import 'package:cazatudo_app/app/modules/sign_in/login_page.dart';
 import 'package:cazatudo_app/app/modules/sign_up/sign_up_page.dart';
 import 'package:cazatudo_app/app/modules/splash/splash_page.dart';
 import 'package:cazatudo_app/app/modules/notifies/notification_page.dart';
@@ -27,8 +27,8 @@ class AppPages {
       page: () => SplashPage(),
     ),
     GetPage(
-      name: AppRoutes.signIn,
-      page: () => SignInPage(),
+      name: AppRoutes.login,
+      page: () => LoginPage(),
     ),
     GetPage(
       name: AppRoutes.signUp,

@@ -1,4 +1,6 @@
 // Essenciais
+import 'package:cazatudo_app/app/core/app_routes/app_pages.dart';
+import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -94,7 +96,7 @@ class _OnboardPageState extends State<OnboardPage> {
                     ),
                     MultiTextButton(
                       onPressed: () {
-                        Get.toNamed('/signUp');
+                        Get.toNamed('signUp');
                       },
                       children: [
                         Text(
