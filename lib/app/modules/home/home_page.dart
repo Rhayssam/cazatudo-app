@@ -1,4 +1,6 @@
 // Essenciais
+import 'package:cazatudo_app/app/core/widgets/custom_app_bar_cart.dart';
+import 'package:cazatudo_app/app/core/widgets/custom_app_bar_search.dart';
 import 'package:cazatudo_app/app/modules/home/banner_widget.dart';
 import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +25,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ThemeConfig.background,
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(
+        actions: [
+          CustomAppBarSearch(),
+          CustomAppBarCart(),
+        ],
+      ),
       //* Início da tela
       body: SafeArea(
         child: CustomScrollView(

@@ -1,3 +1,6 @@
+import 'package:cazatudo_app/app/core/widgets/custom_app_bar.dart';
+import 'package:cazatudo_app/app/core/widgets/custom_app_bar_cart.dart';
+import 'package:cazatudo_app/app/core/widgets/custom_app_bar_search.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesPage extends StatelessWidget {
@@ -6,10 +9,15 @@ class CategoriesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Categorias'),
+      appBar: CustomAppBar(
+        actions: [
+          CustomAppBarSearch(),
+          CustomAppBarCart(),
+        ],
       ),
-      body: Container(),
+      body: Container(
+        child: Text('Categorias'),
+      ),
     );
   }
 }
