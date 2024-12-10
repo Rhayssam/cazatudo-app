@@ -30,13 +30,14 @@ class BannerWidget extends StatelessWidget {
                   _buildAdContainer('Colocar anúncio ou oferta'),
                   _buildAdContainer('Colocar anúncio ou oferta'),
                   _buildAdContainer('Colocar anúncio ou oferta'),
+                  _buildAdContainer('Colocar anúncio ou oferta'),
                 ],
               ),
             ),
           ),
           SmoothPageIndicator(
             controller: pageController,
-            count: 3,
+            count: 4,
             effect: WormEffect(
               dotHeight: 11,
               dotWidth: 11,

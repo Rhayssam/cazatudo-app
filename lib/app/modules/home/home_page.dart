@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 
 // UI
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
-import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
 
 // Widgets Personalizados
 import 'package:cazatudo_app/app/modules/home/banner_widget.dart';
+import 'package:cazatudo_app/app/core/widgets/horizontal_categories_list.dart';
+import 'package:cazatudo_app/app/core/widgets/topic_title.dart';
+import 'package:cazatudo_app/app/core/widgets/vertical_products_list.dart';
 
 // Widgets Personalizados - AppBar
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar.dart';
@@ -33,61 +35,32 @@ class _HomePageState extends State<HomePage> {
           CustomAppBarCart(),
         ],
       ),
-      //* Início da tela
       body: SafeArea(
         child: CustomScrollView(
           slivers: [
             BannerWidget(
               pageController: _controlPage,
             ),
+            TopicTitle(titulo: 'Categorias'),
             SliverToBoxAdapter(
               child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-                child: Text(
-                  'Novidades',
-                  style: CustomTextStyles.mediumText20
-                      .copyWith(color: ThemeConfig.orange1),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      HorizontalCategoriesList(texto: 'Categorias'),
+                      HorizontalCategoriesList(texto: 'Ofertas'),
+                      HorizontalCategoriesList(texto: 'Relâmpago'),
+                      HorizontalCategoriesList(texto: 'Cupons'),
+                      HorizontalCategoriesList(texto: 'Frete'),
+                    ],
+                  ),
                 ),
               ),
             ),
-            SliverPadding(
-              padding: EdgeInsets.symmetric(horizontal: 15),
-              sliver: SliverGrid(
-                delegate: SliverChildBuilderDelegate((context, index) {
-                  return Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: ThemeConfig.lightOrange,
-                      boxShadow: [
-                        BoxShadow(
-                          color: ThemeConfig.lightGrey,
-                          offset: Offset(3, 1),
-                          blurRadius: 10,
-                        ),
-                      ],
-                    ),
-                    child: Stack(
-                      children: [
-                        Center(
-                          child: Text(
-                            'Produto',
-                            style: CustomTextStyles.smallText16
-                                .copyWith(color: ThemeConfig.white),
-                          ),
-                        )
-                      ],
-                    ),
-                  );
-                }, childCount: 6),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  mainAxisExtent: 300,
-                  mainAxisSpacing: 20,
-                  crossAxisSpacing: 10,
-                ),
-              ),
-            ),
+            TopicTitle(titulo: 'Novidades'),
+            VerticalProductsList(),
           ],
         ),
       ),

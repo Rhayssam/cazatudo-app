@@ -49,6 +49,11 @@ class CustomTextStyles {
     fontSize: 12.0,
     fontWeight: FontWeight.w600,
   );
+  static const TextStyle smallText14 = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 14.0,
+    fontWeight: FontWeight.w600,
+  );
   static const TextStyle smallText16 = TextStyle(
     fontFamily: 'Inter',
     fontSize: 16.0,
