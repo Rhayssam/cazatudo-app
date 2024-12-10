@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 // Essenciais
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -7,7 +6,6 @@ import 'package:get/get.dart';
 import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
 
 // UI
-import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 
 class CustomAppBarIcon extends StatelessWidget {
   final Icon? icon;

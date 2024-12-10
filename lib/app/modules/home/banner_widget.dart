@@ -19,7 +19,7 @@ class BannerWidget extends StatelessWidget {
       child: Column(
         children: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
             child: Container(
               height: 200,
               width: double.infinity,

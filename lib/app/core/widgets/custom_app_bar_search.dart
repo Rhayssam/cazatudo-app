@@ -32,7 +32,7 @@ class CustomAppBarSearch extends StatelessWidget {
           child: Row(
             children: [
               const SizedBox(
-                width: 10,
+                width: 15,
               ),
               Icon(
                 Icons.search,
@@ -40,7 +40,7 @@ class CustomAppBarSearch extends StatelessWidget {
                 size: 25,
               ),
               const SizedBox(
-                width: 10,
+                width: 15,
               ),
               Text(
                 'Buscar na Cazatudo',

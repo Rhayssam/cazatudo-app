@@ -17,12 +17,9 @@ class CustomAppBarTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       flex: 8,
-      child: Container(
-        child: Text(
-          title,
-          style:
-              CustomTextStyles.mediumText23.copyWith(color: ThemeConfig.white),
-        ),
+      child: Text(
+        title,
+        style: CustomTextStyles.mediumText23.copyWith(color: ThemeConfig.white),
       ),
     );
   }

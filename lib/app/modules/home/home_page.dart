@@ -69,6 +69,11 @@ class _HomePageState extends State<HomePage> {
           ),
           TopicTitle(titulo: 'Novidades'),
           VerticalProductsList(),
+          SliverToBoxAdapter(
+            child: const SizedBox(
+              height: 15,
+            ),
+          ),
         ],
       ),
     );

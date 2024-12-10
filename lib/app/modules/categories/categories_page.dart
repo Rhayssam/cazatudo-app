@@ -9,6 +9,7 @@ import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 import 'package:cazatudo_app/app/core/widgets/sliver_app_bar.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_search.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
+import 'package:cazatudo_app/app/core/widgets/categories_button.dart';
 
 class CategoriesPage extends StatelessWidget {
   const CategoriesPage({super.key});
@@ -44,21 +45,29 @@ class CategoriesPage extends StatelessWidget {
               ),
             ),
           ),
+          CategoriesButton(text: 'Exemplo de Categoria', onPressed: () {}),
+          CategoriesButton(text: 'Exemplo de Categoria', onPressed: () {}),
+          CategoriesButton(text: 'Exemplo de Categoria', onPressed: () {}),
+          CategoriesButton(text: 'Exemplo de Categoria', onPressed: () {}),
+          CategoriesButton(text: 'Exemplo de Categoria', onPressed: () {}),
+          CategoriesButton(text: 'Exemplo de Categoria', onPressed: () {}),
+          CategoriesButton(text: 'Exemplo de Categoria', onPressed: () {}),
+          CategoriesButton(text: 'Exemplo de Categoria', onPressed: () {}),
+          CategoriesButton(text: 'Exemplo de Categoria', onPressed: () {}),
+          CategoriesButton(text: 'Exemplo de Categoria', onPressed: () {}),
+          CategoriesButton(text: 'Exemplo de Categoria', onPressed: () {}),
+          CategoriesButton(text: 'Exemplo de Categoria', onPressed: () {}),
+          CategoriesButton(text: 'Exemplo de Categoria', onPressed: () {}),
+          CategoriesButton(text: 'Exemplo de Categoria', onPressed: () {}),
+          CategoriesButton(text: 'Exemplo de Categoria', onPressed: () {}),
+          CategoriesButton(text: 'Exemplo de Categoria', onPressed: () {}),
+          CategoriesButton(text: 'Exemplo de Categoria', onPressed: () {}),
+          CategoriesButton(text: 'Exemplo de Categoria', onPressed: () {}),
           SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Container(
-                height: 50,
-                decoration: BoxDecoration(
-                  color: ThemeConfig.white,
-                  border: Border.all(
-                    color: ThemeConfig.grey,
-                    width: 1,
-                  ),
-                ),
-              ),
+            child: const SizedBox(
+              height: 15,
             ),
-          )
+          ),
         ],
       ),
     );
