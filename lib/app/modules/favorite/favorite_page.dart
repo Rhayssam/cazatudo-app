@@ -2,11 +2,12 @@
 import 'package:flutter/material.dart';
 
 // UI
-import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 
 // Widgets Personalizados
-import 'package:cazatudo_app/app/core/widgets/custom_app_bar.dart';
+import 'package:cazatudo_app/app/core/widgets/custom_app_bar_title.dart';
+import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
+import 'package:cazatudo_app/app/core/widgets/sliver_app_bar.dart';
 
 class FavoritePage extends StatelessWidget {
   const FavoritePage({super.key});
@@ -14,16 +15,24 @@ class FavoritePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
-        title: Text(
-          'Favoritos',
-          style: CustomTextStyles.mediumText20.copyWith(
-            color: ThemeConfig.white,
+      backgroundColor: ThemeConfig.background,
+      body: CustomScrollView(
+        slivers: [
+          CustomSliverAppBar(
+            actions: [
+              const SizedBox(width: 15),
+              CustomAppBarTitle(title: 'Favoritos'),
+              CustomAppBarIcon(
+                icon: Icon(
+                  Icons.shopping_cart,
+                  color: ThemeConfig.white,
+                  size: 35,
+                ),
+              ),
+              const SizedBox(width: 15),
+            ],
           ),
-        ),
-      ),
-      body: Container(
-        child: Text('Favoritos'),
+        ],
       ),
     );
   }

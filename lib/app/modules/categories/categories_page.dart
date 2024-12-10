@@ -1,10 +1,14 @@
 // Essenciais
 import 'package:flutter/material.dart';
 
+// UI
+import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
+import 'package:cazatudo_app/app/core/ui/theme_config.dart';
+
 // Widgets Personalizados - AppBar
-import 'package:cazatudo_app/app/core/widgets/custom_app_bar.dart';
+import 'package:cazatudo_app/app/core/widgets/sliver_app_bar.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_search.dart';
-import 'package:cazatudo_app/app/core/widgets/custom_app_bar_cart.dart';
+import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
 
 class CategoriesPage extends StatelessWidget {
   const CategoriesPage({super.key});
@@ -12,14 +16,50 @@ class CategoriesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
-        actions: [
-          CustomAppBarSearch(),
-          CustomAppBarCart(),
+      backgroundColor: ThemeConfig.background,
+      body: CustomScrollView(
+        slivers: [
+          CustomSliverAppBar(
+            actions: [
+              const SizedBox(width: 15),
+              CustomAppBarSearch(),
+              const SizedBox(width: 15),
+              CustomAppBarIcon(
+                icon: Icon(
+                  Icons.shopping_cart,
+                  color: ThemeConfig.white,
+                  size: 35,
+                ),
+              ),
+              const SizedBox(width: 15),
+            ],
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              child: Text(
+                'Categorias',
+                style: CustomTextStyles.mediumText20
+                    .copyWith(color: ThemeConfig.grey),
+              ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Container(
+                height: 50,
+                decoration: BoxDecoration(
+                  color: ThemeConfig.white,
+                  border: Border.all(
+                    color: ThemeConfig.grey,
+                    width: 1,
+                  ),
+                ),
+              ),
+            ),
+          )
         ],
-      ),
-      body: Container(
-        child: Text('Categorias'),
       ),
     );
   }

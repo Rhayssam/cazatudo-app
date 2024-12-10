@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 // Essenciais
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,10 +9,12 @@ import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
 // UI
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 
-class CustomAppBarCart extends StatelessWidget {
-  const CustomAppBarCart({
-    super.key,
-  });
+class CustomAppBarIcon extends StatelessWidget {
+  final Icon? icon;
+  const CustomAppBarIcon({
+    Key? key,
+    this.icon,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +30,7 @@ class CustomAppBarCart extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
           ),
-          child: Icon(
-            Icons.shopping_cart,
-            color: ThemeConfig.white,
-            size: 35,
-          ),
+          child: icon,
         ),
       ),
     );
