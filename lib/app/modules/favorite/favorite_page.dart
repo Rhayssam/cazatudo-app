@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 // UI
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 
-// Widgets Personalizados
+// Widgets Personalizados - AppBar
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_title.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
 import 'package:cazatudo_app/app/core/widgets/sliver_app_bar.dart';
+// Widgets Personalizados
 import 'package:cazatudo_app/app/core/widgets/empty_view.dart';
 
 class FavoritePage extends StatelessWidget {

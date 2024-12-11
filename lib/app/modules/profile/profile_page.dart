@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 // UI
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 
-// Widgets Personalizados
+// Widgets Personalizados - AppBar
 import 'package:cazatudo_app/app/core/widgets/sliver_app_bar.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_title.dart';
+// Widgets Personalizados
 import 'package:cazatudo_app/app/core/widgets/profile_header.dart';
 import 'package:cazatudo_app/app/core/widgets/profile_options_button.dart';
 

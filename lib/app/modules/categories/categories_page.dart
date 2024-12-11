@@ -9,6 +9,7 @@ import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 import 'package:cazatudo_app/app/core/widgets/sliver_app_bar.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_search.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
+// Widgets Personalizados
 import 'package:cazatudo_app/app/core/widgets/categories_button.dart';
 
 class CategoriesPage extends StatelessWidget {

@@ -5,8 +5,6 @@ import 'package:get/get.dart';
 // Rotas
 import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
 
-// UI
-
 class CustomAppBarIcon extends StatelessWidget {
   final Icon? icon;
   const CustomAppBarIcon({

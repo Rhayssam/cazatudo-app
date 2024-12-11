@@ -4,16 +4,15 @@ import 'package:flutter/material.dart';
 // UI
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 
+// Widgets Personalizados - AppBar
+import 'package:cazatudo_app/app/core/widgets/sliver_app_bar.dart';
+import 'package:cazatudo_app/app/core/widgets/custom_app_bar_search.dart';
+import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
 // Widgets Personalizados
 import 'package:cazatudo_app/app/modules/home/banner_widget.dart';
 import 'package:cazatudo_app/app/core/widgets/topic_title.dart';
 import 'package:cazatudo_app/app/core/widgets/horizontal_categories_list.dart';
 import 'package:cazatudo_app/app/core/widgets/vertical_products_list.dart';
-
-// Widgets Personalizados - AppBar
-import 'package:cazatudo_app/app/core/widgets/sliver_app_bar.dart';
-import 'package:cazatudo_app/app/core/widgets/custom_app_bar_search.dart';
-import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
