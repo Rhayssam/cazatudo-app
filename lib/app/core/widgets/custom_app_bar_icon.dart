@@ -1,12 +1,13 @@
 // Essenciais
+import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBarIcon extends StatelessWidget {
-  final Icon? icon;
+  final IconData icon;
   final VoidCallback onPressed;
   const CustomAppBarIcon({
     Key? key,
-    this.icon,
+    required this.icon,
     required this.onPressed,
   }) : super(key: key);
 
@@ -22,7 +23,11 @@ class CustomAppBarIcon extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
           ),
-          child: icon,
+          child: Icon(
+            icon,
+            color: ThemeConfig.lightOrange,
+            size: 35,
+          ),
         ),
       ),
     );

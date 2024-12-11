@@ -17,7 +17,7 @@ class CustomAppBarSearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      flex: 8,
+      flex: 5,
       child: InkWell(
         borderRadius: BorderRadius.circular(20),
         onTap: () {

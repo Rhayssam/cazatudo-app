@@ -39,11 +39,7 @@ class _HomePageState extends State<HomePage> {
               CustomAppBarSearch(),
               const SizedBox(width: 15),
               CustomAppBarIcon(
-                icon: Icon(
-                  Icons.shopping_cart,
-                  color: ThemeConfig.white,
-                  size: 35,
-                ),
+                icon: Icons.shopping_cart_rounded,
                 onPressed: () {
                   Get.toNamed(
                     AppRoutes.cart,

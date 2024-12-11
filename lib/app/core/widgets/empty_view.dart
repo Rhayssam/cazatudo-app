@@ -39,7 +39,7 @@ class EmptyView extends StatelessWidget {
               softWrap: true,
               overflow: TextOverflow.visible,
             ),
-          )
+          ),
         ],
       ),
     );

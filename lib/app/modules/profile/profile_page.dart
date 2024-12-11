@@ -44,6 +44,11 @@ class ProfilePage extends StatelessWidget {
             icon: Icons.headset_mic,
           ),
           ProfileOptionsButton(
+            text: 'Lojas',
+            onPressed: () {},
+            icon: Icons.store_rounded,
+          ),
+          ProfileOptionsButton(
             text: 'Favoritos',
             onPressed: () {},
             icon: Icons.favorite,
