@@ -8,6 +8,7 @@ import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_title.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
 import 'package:cazatudo_app/app/core/widgets/sliver_app_bar.dart';
+import 'package:cazatudo_app/app/core/widgets/empty_view.dart';
 
 class FavoritePage extends StatelessWidget {
   const FavoritePage({super.key});
@@ -31,6 +32,10 @@ class FavoritePage extends StatelessWidget {
               ),
               const SizedBox(width: 15),
             ],
+          ),
+          EmptyView(
+            text: 'Ops!...Você ainda não tem itens favoritos',
+            icon: Icons.favorite,
           ),
         ],
       ),

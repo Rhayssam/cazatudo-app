@@ -1,4 +1,5 @@
 // Essenciais
+import 'package:cazatudo_app/app/core/widgets/empty_view.dart';
 import 'package:flutter/material.dart';
 
 // UI
@@ -23,6 +24,9 @@ class NotificationPage extends StatelessWidget {
               CustomAppBarTitle(title: 'Notificações'),
             ],
           ),
+          EmptyView(
+              text: 'Você ainda não possui notificações',
+              icon: Icons.notifications)
         ],
       ),
     );
