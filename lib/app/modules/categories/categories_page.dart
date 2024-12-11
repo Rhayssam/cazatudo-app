@@ -1,6 +1,9 @@
 // Essenciais
 import 'package:flutter/material.dart';
 
+// Rotas
+import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
+
 // UI
 import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
@@ -11,6 +14,7 @@ import 'package:cazatudo_app/app/core/widgets/custom_app_bar_search.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
 // Widgets Personalizados
 import 'package:cazatudo_app/app/core/widgets/categories_button.dart';
+import 'package:get/get.dart';
 
 class CategoriesPage extends StatelessWidget {
   const CategoriesPage({super.key});
@@ -32,6 +36,11 @@ class CategoriesPage extends StatelessWidget {
                   color: ThemeConfig.white,
                   size: 35,
                 ),
+                onPressed: () {
+                  Get.toNamed(
+                    AppRoutes.cart,
+                  );
+                },
               ),
               const SizedBox(width: 15),
             ],

@@ -1,6 +1,9 @@
 // Essenciais
 import 'package:flutter/material.dart';
 
+// Rotas
+import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
+
 // UI
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 
@@ -10,6 +13,7 @@ import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
 import 'package:cazatudo_app/app/core/widgets/sliver_app_bar.dart';
 // Widgets Personalizados
 import 'package:cazatudo_app/app/core/widgets/empty_view.dart';
+import 'package:get/get.dart';
 
 class FavoritePage extends StatelessWidget {
   const FavoritePage({super.key});
@@ -30,6 +34,11 @@ class FavoritePage extends StatelessWidget {
                   color: ThemeConfig.white,
                   size: 35,
                 ),
+                onPressed: () {
+                  Get.toNamed(
+                    AppRoutes.cart,
+                  );
+                },
               ),
               const SizedBox(width: 15),
             ],

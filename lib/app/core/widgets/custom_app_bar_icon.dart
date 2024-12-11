@@ -1,15 +1,13 @@
 // Essenciais
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-// Rotas
-import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
 
 class CustomAppBarIcon extends StatelessWidget {
   final Icon? icon;
+  final VoidCallback onPressed;
   const CustomAppBarIcon({
     Key? key,
     this.icon,
+    required this.onPressed,
   }) : super(key: key);
 
   @override
@@ -18,9 +16,7 @@ class CustomAppBarIcon extends StatelessWidget {
       flex: 1,
       child: InkWell(
         borderRadius: BorderRadius.circular(30),
-        onTap: () {
-          Get.toNamed(AppRoutes.cart);
-        },
+        onTap: onPressed,
         child: Container(
           height: 50,
           decoration: BoxDecoration(

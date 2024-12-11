@@ -1,6 +1,9 @@
 // Essenciais
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+// Rotas
+import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
 // UI
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 
@@ -41,6 +44,11 @@ class _HomePageState extends State<HomePage> {
                   color: ThemeConfig.white,
                   size: 35,
                 ),
+                onPressed: () {
+                  Get.toNamed(
+                    AppRoutes.cart,
+                  );
+                },
               ),
               const SizedBox(width: 15),
             ],
