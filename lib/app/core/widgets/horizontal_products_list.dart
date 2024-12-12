@@ -1,4 +1,5 @@
 // Essenciais
+import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
 import 'package:flutter/material.dart';
 
 // UI
@@ -85,6 +86,7 @@ class HorizontalProductsList extends StatelessWidget {
                 height: 140,
                 color: ThemeConfig.lightGrey,
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
                       width: 140,
@@ -93,8 +95,128 @@ class HorizontalProductsList extends StatelessWidget {
                     ),
                     Container(
                       width: 180,
-                      height: 140,
+                      height: 170,
                       color: ThemeConfig.white,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          //* Titulo do produto
+                          Container(
+                            height: 60,
+                            width: 180,
+                            color: ThemeConfig.grey,
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 2),
+                              child: Text(
+                                'Nome do produto Nome do produto Nome do produto Nome do produto Nome do produto Nome do produto ',
+                                style: CustomTextStyles.smallText13
+                                    .copyWith(color: ThemeConfig.black),
+                                softWrap: true,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 3,
+                              ),
+                            ),
+                          ),
+                          //* Valor anterior
+                          Container(
+                            height: 20,
+                            width: 180,
+                            color: ThemeConfig.grey,
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 2),
+                              child: Text(
+                                'R\$0000,00',
+                                style: CustomTextStyles.smallText12
+                                    .copyWith(color: ThemeConfig.lightGrey),
+                                softWrap: true,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
+                              ),
+                            ),
+                          ),
+                          //* Valor no PIX
+                          Container(
+                            height: 30,
+                            width: 180,
+                            color: ThemeConfig.grey,
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 2),
+                              child: Text(
+                                'R\$0000,00',
+                                style: CustomTextStyles.mediumText18
+                                    .copyWith(color: ThemeConfig.orange1),
+                                softWrap: true,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
+                              ),
+                            ),
+                          ),
+                          //* Valor parcelado
+                          Container(
+                            height: 15,
+                            width: 180,
+                            color: ThemeConfig.grey,
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 2),
+                              child: Text(
+                                'À vista no PIX',
+                                style: CustomTextStyles.smallText11
+                                    .copyWith(color: ThemeConfig.lightGrey),
+                                softWrap: true,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: 15,
+                            width: 180,
+                            color: ThemeConfig.grey,
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  color: ThemeConfig.background,
+                                  width: 45,
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 2),
+                                    child: Text(
+                                      'Ou até',
+                                      style: CustomTextStyles.smallText11
+                                          .copyWith(
+                                              color: ThemeConfig.lightGrey),
+                                      softWrap: true,
+                                      overflow: TextOverflow.ellipsis,
+                                      maxLines: 1,
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  color: ThemeConfig.background,
+                                  width: 135,
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 2),
+                                    child: Text(
+                                      '10x de R\$00,00',
+                                      style: CustomTextStyles.smallText11
+                                          .copyWith(color: ThemeConfig.black),
+                                      softWrap: true,
+                                      overflow: TextOverflow.ellipsis,
+                                      maxLines: 1,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
