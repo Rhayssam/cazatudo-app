@@ -16,7 +16,6 @@ import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
 import 'package:cazatudo_app/app/core/widgets/banner_widget.dart';
 import 'package:cazatudo_app/app/core/widgets/topic_title.dart';
 import 'package:cazatudo_app/app/core/widgets/horizontal_categories_list.dart';
-import 'package:cazatudo_app/app/core/widgets/vertical_products_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -93,7 +92,6 @@ class _HomePageState extends State<HomePage> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    HorizontalProductsList(),
                     HorizontalProductsList(),
                     HorizontalProductsList(),
                   ],
