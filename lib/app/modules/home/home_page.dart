@@ -1,4 +1,5 @@
 // Essenciais
+import 'package:cazatudo_app/app/core/widgets/horizontal_products_list.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,7 +13,7 @@ import 'package:cazatudo_app/app/core/widgets/sliver_app_bar.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_search.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
 // Widgets Personalizados
-import 'package:cazatudo_app/app/modules/home/banner_widget.dart';
+import 'package:cazatudo_app/app/core/widgets/banner_widget.dart';
 import 'package:cazatudo_app/app/core/widgets/topic_title.dart';
 import 'package:cazatudo_app/app/core/widgets/horizontal_categories_list.dart';
 import 'package:cazatudo_app/app/core/widgets/vertical_products_list.dart';
@@ -41,9 +42,7 @@ class _HomePageState extends State<HomePage> {
               CustomAppBarIcon(
                 icon: Icons.shopping_cart_rounded,
                 onPressed: () {
-                  Get.toNamed(
-                    AppRoutes.cart,
-                  );
+                  Get.toNamed(AppRoutes.cart);
                 },
               ),
               const SizedBox(width: 15),
@@ -53,6 +52,11 @@ class _HomePageState extends State<HomePage> {
             pageController: _controlPage,
           ),
           TopicTitle(titulo: 'Categorias'),
+          SliverToBoxAdapter(
+            child: const SizedBox(
+              width: 15,
+            ),
+          ),
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -70,8 +74,33 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+          SliverToBoxAdapter(
+            child: const SizedBox(
+              width: 15,
+            ),
+          ),
           TopicTitle(titulo: 'Novidades'),
-          VerticalProductsList(),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Container(),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    HorizontalProductsList(),
+                    HorizontalProductsList(),
+                    HorizontalProductsList(),
+                  ],
+                ),
+              ),
+            ),
+          ),
           SliverToBoxAdapter(
             child: const SizedBox(
               height: 15,
