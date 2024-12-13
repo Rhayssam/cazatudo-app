@@ -32,7 +32,7 @@ class HorizontalCategoriesList extends StatelessWidget {
                 spreadRadius: 1,
                 blurRadius: 8,
                 offset: Offset(0, 6),
-              )
+              ),
             ],
           ),
         ),
@@ -45,7 +45,7 @@ class HorizontalCategoriesList extends StatelessWidget {
                 CustomTextStyles.smallText14.copyWith(color: ThemeConfig.grey),
             textAlign: TextAlign.center,
             softWrap: true,
-            maxLines: 2,
+            maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
         ),

@@ -1,5 +1,7 @@
 // Essenciais
+import 'package:cazatudo_app/app/core/widgets/horizontal_list.dart';
 import 'package:cazatudo_app/app/core/widgets/horizontal_products_list.dart';
+import 'package:cazatudo_app/app/core/widgets/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -47,62 +49,74 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(width: 15),
             ],
           ),
-          BannerWidget(
-            pageController: _controlPage,
-          ),
+          BannerWidget(pageController: _controlPage),
           TopicTitle(titulo: 'Categorias'),
-          SliverToBoxAdapter(
-            child: const SizedBox(
-              width: 15,
-            ),
-          ),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    HorizontalCategoriesList(texto: 'Categorias'),
-                    HorizontalCategoriesList(texto: 'Ofertas'),
-                    HorizontalCategoriesList(texto: 'Relâmpago'),
-                    HorizontalCategoriesList(texto: 'Cupons'),
-                    HorizontalCategoriesList(texto: 'Frete'),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          SliverToBoxAdapter(
-            child: const SizedBox(
-              width: 15,
-            ),
+          HorizontalList(
+            children: [
+              HorizontalCategoriesList(texto: 'Categorias'),
+              HorizontalCategoriesList(texto: 'Ofertas'),
+              HorizontalCategoriesList(texto: 'Relâmpago'),
+              HorizontalCategoriesList(texto: 'Cupons'),
+              HorizontalCategoriesList(texto: 'Frete'),
+            ],
           ),
           TopicTitle(titulo: 'Novidades'),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Container(),
-            ),
-          ),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    HorizontalProductsList(),
-                    HorizontalProductsList(),
-                  ],
-                ),
+          HorizontalList(
+            children: [
+              HorizontalProductsList(
+                texto: 'Cama exemplo',
+                valorAntigo: '700,00',
+                valorPix: '500,00',
               ),
-            ),
+              HorizontalProductsList(
+                texto: 'Guarda roupa exemplo',
+                valorAntigo: '1500,00',
+                valorPix: '1200,00',
+              ),
+            ],
           ),
-          SliverToBoxAdapter(
-            child: const SizedBox(
-              height: 15,
-            ),
+          TopicTitle(titulo: 'Opções'),
+          HorizontalList(
+            children: [
+              HorizontalCategoriesList(texto: 'Quarto'),
+              HorizontalCategoriesList(texto: 'Sala'),
+              HorizontalCategoriesList(texto: 'Cozinha'),
+              HorizontalCategoriesList(texto: 'Banheiro'),
+              HorizontalCategoriesList(texto: 'Sala de Jantar'),
+              HorizontalCategoriesList(texto: 'Eletroportáteis'),
+            ],
+          ),
+          Spacing(height: 25),
+          TopicTitle(titulo: 'Mais Procurados'),
+          HorizontalList(
+            children: [
+              HorizontalProductsList(
+                texto: 'Cama exemplo',
+                valorAntigo: '700,00',
+                valorPix: '500,00',
+              ),
+              HorizontalProductsList(
+                texto: 'Guarda roupa exemplo',
+                valorAntigo: '1500,00',
+                valorPix: '1200,00',
+              ),
+            ],
+          ),
+          Spacing(height: 15),
+          TopicTitle(titulo: 'Ofertas do dia'),
+          HorizontalList(
+            children: [
+              HorizontalProductsList(
+                texto: 'Cama exemplo',
+                valorAntigo: '700,00',
+                valorPix: '500,00',
+              ),
+              HorizontalProductsList(
+                texto: 'Guarda roupa exemplo',
+                valorAntigo: '1500,00',
+                valorPix: '1200,00',
+              ),
+            ],
           ),
         ],
       ),

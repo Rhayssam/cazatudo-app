@@ -1,6 +1,8 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 // Essenciais
-import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
 import 'package:flutter/material.dart';
+
+import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
 
 // UI
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
@@ -8,8 +10,15 @@ import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
 import 'package:get/get.dart';
 
 class HorizontalProductsList extends StatelessWidget {
+  final String texto;
+  final String valorAntigo;
+  final String valorPix;
+
   const HorizontalProductsList({
     Key? key,
+    required this.texto,
+    required this.valorAntigo,
+    required this.valorPix,
   }) : super(key: key);
 
   @override
@@ -132,7 +141,7 @@ class HorizontalProductsList extends StatelessWidget {
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 4),
                                 child: Text(
-                                  'Nome do produto Nome do produto Nome do produto Nome do produto Nome do produto Nome do produto ',
+                                  texto,
                                   style: CustomTextStyles.smallText13
                                       .copyWith(color: ThemeConfig.black),
                                   softWrap: true,
@@ -150,7 +159,7 @@ class HorizontalProductsList extends StatelessWidget {
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 4),
                                 child: Text(
-                                  'R\$0000,00',
+                                  'R\$$valorAntigo',
                                   style: CustomTextStyles.smallText12
                                       .copyWith(color: ThemeConfig.lightGrey),
                                   softWrap: true,
@@ -168,7 +177,7 @@ class HorizontalProductsList extends StatelessWidget {
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 4),
                                 child: Text(
-                                  'R\$0000,00',
+                                  'R\$$valorPix',
                                   style: CustomTextStyles.mediumText18
                                       .copyWith(color: ThemeConfig.orange1),
                                   softWrap: true,
