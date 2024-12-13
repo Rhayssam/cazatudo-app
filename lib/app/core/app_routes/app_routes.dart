@@ -11,4 +11,5 @@ class AppRoutes {
   static const String notification = '/notification';
   static const String profile = '/profile';
   static const String navigation = '/navigation';
+  static const String product = '/product';
 }

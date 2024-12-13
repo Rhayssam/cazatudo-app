@@ -1,4 +1,5 @@
 // Essenciais
+import 'package:cazatudo_app/app/modules/product/product_page.dart';
 import 'package:get/get.dart';
 
 // Rotas
@@ -69,6 +70,10 @@ class AppPages {
     GetPage(
       name: AppRoutes.navigation,
       page: () => NavigationScreen(),
+    ),
+    GetPage(
+      name: AppRoutes.product,
+      page: () => ProductPage(),
     ),
   ];
 }

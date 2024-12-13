@@ -55,13 +55,13 @@ Widget _buildAdContainer(String text) {
   return Container(
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(10),
-      color: ThemeConfig.lightOrange,
+      color: ThemeConfig.white,
     ),
     child: Center(
       child: Text(
         'Colocar anúncio ou oferta',
         style: CustomTextStyles.mediumText18.copyWith(
-          color: ThemeConfig.white,
+          color: ThemeConfig.orange1,
         ),
       ),
     ),

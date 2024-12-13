@@ -24,8 +24,16 @@ class HorizontalCategoriesList extends StatelessWidget {
           height: 100,
           margin: const EdgeInsets.symmetric(horizontal: 8),
           decoration: BoxDecoration(
-            color: ThemeConfig.lightOrange,
+            color: ThemeConfig.white,
             borderRadius: BorderRadius.circular(12),
+            boxShadow: [
+              BoxShadow(
+                color: ThemeConfig.grey.withOpacity(0.2),
+                spreadRadius: 1,
+                blurRadius: 8,
+                offset: Offset(0, 6),
+              )
+            ],
           ),
         ),
         const SizedBox(height: 2),
