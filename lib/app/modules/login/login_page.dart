@@ -72,6 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: SignInButton(
                   Buttons.google,
                   onPressed: () {},
+                  // TODO - Fazer a implementação do login via Firebase
                   text: 'Continue com o Google',
                   shape: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
