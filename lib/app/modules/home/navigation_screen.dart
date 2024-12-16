@@ -1,4 +1,5 @@
 // Essenciais
+import 'package:cazatudo_app/app/modules/login/login_page.dart';
 import 'package:flutter/material.dart';
 
 // UI
@@ -104,7 +105,8 @@ class _NavigationScreenState extends State<NavigationScreen> {
           CategoriesPage(),
           FavoritePage(),
           NotificationPage(),
-          ProfilePage(),
+          LoginPage(),
+          // ProfilePage()
         ],
       ),
     );

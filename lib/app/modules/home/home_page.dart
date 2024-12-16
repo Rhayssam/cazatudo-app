@@ -1,7 +1,6 @@
 // Essenciais
 import 'package:cazatudo_app/app/core/widgets/horizontal_list.dart';
 import 'package:cazatudo_app/app/core/widgets/horizontal_products_list.dart';
-import 'package:cazatudo_app/app/core/widgets/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,3 +1,4 @@
+import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_title.dart';
@@ -21,14 +22,15 @@ class ProductPage extends StatelessWidget {
               CustomAppBarIcon(
                   icon: Icons.arrow_back_ios,
                   onPressed: () {
-                    Get.toNamed('/navigation');
+                    Get.toNamed(AppRoutes.navigation);
                   }),
               CustomAppBarTitle(title: 'Produtos'),
             ],
           ),
           EmptyView(
-              text: 'Ops!... Não foi possível concluir sua busca.',
-              icon: Icons.sentiment_dissatisfied_sharp)
+            text: 'Ops!... Não foi possível concluir sua busca.',
+            icon: Icons.sentiment_dissatisfied_sharp,
+          )
         ],
       ),
     );
