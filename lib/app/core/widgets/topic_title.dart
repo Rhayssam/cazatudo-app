@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 // Essenciais
 import 'package:flutter/material.dart';
 
@@ -7,9 +8,11 @@ import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 
 class TopicTitle extends StatelessWidget {
   final String titulo;
+  final Color color;
   const TopicTitle({
     Key? key,
     required this.titulo,
+    required this.color,
   }) : super(key: key);
 
   @override
@@ -19,8 +22,7 @@ class TopicTitle extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
         child: Text(
           titulo,
-          style: CustomTextStyles.mediumText20
-              .copyWith(color: ThemeConfig.orange1),
+          style: CustomTextStyles.mediumText20.copyWith(color: color),
         ),
       ),
     );

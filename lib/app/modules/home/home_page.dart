@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
           BannerWidget(pageController: _controlPage),
-          TopicTitle(titulo: 'Categorias'),
+          TopicTitle(titulo: 'Categorias', color: ThemeConfig.orange1),
           HorizontalList(
             children: [
               HorizontalCategoriesList(texto: 'Categorias'),
@@ -60,50 +60,7 @@ class _HomePageState extends State<HomePage> {
               HorizontalCategoriesList(texto: 'Frete'),
             ],
           ),
-          TopicTitle(titulo: 'Novidades'),
-          HorizontalList(
-            children: [
-              HorizontalProductsList(
-                texto: 'Cama exemplo',
-                valorAntigo: '700,00',
-                valorPix: '500,00',
-              ),
-              HorizontalProductsList(
-                texto: 'Guarda roupa exemplo',
-                valorAntigo: '1500,00',
-                valorPix: '1200,00',
-              ),
-            ],
-          ),
-          TopicTitle(titulo: 'Opções'),
-          HorizontalList(
-            children: [
-              HorizontalCategoriesList(texto: 'Quarto'),
-              HorizontalCategoriesList(texto: 'Sala'),
-              HorizontalCategoriesList(texto: 'Cozinha'),
-              HorizontalCategoriesList(texto: 'Banheiro'),
-              HorizontalCategoriesList(texto: 'Sala de Jantar'),
-              HorizontalCategoriesList(texto: 'Eletroportáteis'),
-            ],
-          ),
-          Spacing(height: 25),
-          TopicTitle(titulo: 'Mais Procurados'),
-          HorizontalList(
-            children: [
-              HorizontalProductsList(
-                texto: 'Cama exemplo',
-                valorAntigo: '700,00',
-                valorPix: '500,00',
-              ),
-              HorizontalProductsList(
-                texto: 'Guarda roupa exemplo',
-                valorAntigo: '1500,00',
-                valorPix: '1200,00',
-              ),
-            ],
-          ),
-          Spacing(height: 15),
-          TopicTitle(titulo: 'Ofertas do dia'),
+          TopicTitle(titulo: 'Novidades', color: ThemeConfig.orange1),
           HorizontalList(
             children: [
               HorizontalProductsList(
