@@ -1,5 +1,7 @@
 // Essenciais
+import 'package:cazatudo_app/app/modules/categories/category_controller.dart';
 import 'package:cazatudo_app/app/modules/product/product_page.dart';
+import 'package:cazatudo_app/app/repositories/category_repository.dart';
 import 'package:get/get.dart';
 
 // Rotas
@@ -53,6 +55,12 @@ class AppPages {
     ),
     GetPage(
       name: AppRoutes.categories,
+      binding: BindingsBuilder(
+        () {
+          Get.lazyPut(() => CategoryRepository());
+          Get.put(CategoryController(repository: Get.find()));
+        },
+      ),
       page: () => CategoriesPage(),
     ),
     GetPage(
@@ -70,6 +78,12 @@ class AppPages {
     GetPage(
       name: AppRoutes.navigation,
       page: () => NavigationScreen(),
+      binding: BindingsBuilder(
+        () {
+          Get.lazyPut(() => CategoryRepository());
+          Get.put(CategoryController(repository: Get.find()));
+        },
+      ),
     ),
     GetPage(
       name: AppRoutes.product,
