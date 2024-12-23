@@ -1,27 +1,70 @@
 {
-    "categorias": [
-      { "id": 1, "name": "Móveis" },
-      { "id": 2, "name": "Decoração" },
-      { "id": 3, "name": "Banheiro" },
-      { "id": 4, "name": "Portas" },
-      { "id": 5, "name": "Iluminação" },
-      { "id": 6, "name": "Eletroportáteis" },
-      { "id": 7, "name": "Ar e ventilação" },
-      { "id": 8, "name": "Cama, Mesa e Banho" },
-      { "id": 9, "name": "Utilidades Domésticas" },
-      { "id": 10, "name": "Jardim e Lazer" },
-      { "id": 11, "name": "Ferramentas" }
-    ],
-    "setores": [
-      { "id": 1, "name": "Sala de estar" },
-      { "id": 2, "name": "Cozinha" },
-      { "id": 3, "name": "Sala de Jantar" },
-      { "id": 4, "name": "Quarto" },
-      { "id": 5, "name": "Quarto infantil" },
-      { "id": 6, "name": "Quarto de bebê" },
-      { "id": 7, "name": "Banheiro" },
-      { "id": 8, "name": "Lavanderia" },
-      { "id": 9, "name": "Jardim" }
-    ]
-  }
+  "categorias": [
+    { "id": 1, "name": "Móveis" },
+    { "id": 2, "name": "Decoração" },
+    { "id": 3, "name": "Banheiro" },
+    { "id": 4, "name": "Portas" },
+    { "id": 5, "name": "Iluminação" },
+    { "id": 6, "name": "Eletroportáteis" },
+    { "id": 7, "name": "Ar e ventilação" },
+    { "id": 8, "name": "Cama, Mesa e Banho" },
+    { "id": 9, "name": "Utilidades Domésticas" },
+    { "id": 10, "name": "Jardim e Lazer" },
+    { "id": 11, "name": "Ferramentas" }
+  ],
+  
+  "setores": [
+    { "id": 1, "name": "Sala de estar" },
+    { "id": 2, "name": "Cozinha" },
+    { "id": 3, "name": "Sala de Jantar" },
+    { "id": 4, "name": "Quarto" },
+    { "id": 5, "name": "Quarto infantil" },
+    { "id": 6, "name": "Quarto de bebê" },
+    { "id": 7, "name": "Banheiro" },
+    { "id": 8, "name": "Lavanderia" },
+    { "id": 9, "name": "Jardim" }
+  ],
+
+  "banner": [
+    {"imagem": "imagem", "id_setor": 1},
+    {"imagem": "imagem", "id_setor": 2}
+  ],
+
+
+  "produtos": [
+    {
+      "descricao": "Sofá médio",
+      "categoria": 1,
+      "setor": 1,
+      "valor_anterior": 1000,
+      "valor_pix": 800,
+      "parcelas": 5,
+      "valor_parcelas": 50,
+      "favoritado": false,
+      "adicionado_carrinho": false
+    },
+    {
+      "descricao": "Cama de casal",
+      "categoria": 1,
+      "setor": 4,
+      "valor_anterior": 100,
+      "valor_pix": 111,
+      "parcelas": 5,
+      "valor_parcelas": 50,
+      "favoritado": false,
+      "adicionado_carrinho": false
+    },    
+    {
+      "descricao": "Guarda roupa",
+      "categoria": 1,
+      "setor": 4,
+      "valor_anterior": 100,
+      "valor_pix": 111,
+      "parcelas": 5,
+      "valor_parcelas": 50,
+      "favoritado": false,
+      "adicionado_carrinho": false
+    }
+  ]
+}
   

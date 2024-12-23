@@ -1,13 +1,19 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:developer';
 
-import 'package:cazatudo_app/app/models/category_model.dart';
 import 'package:get/get.dart';
 
+import 'package:cazatudo_app/app/core/rest_client/rest_client.dart';
+import 'package:cazatudo_app/app/models/category_model.dart';
+
 class CategoryRepository extends GetConnect {
-  final restClient = GetConnect();
+  final RestClient restClient;
+  CategoryRepository({
+    required this.restClient,
+  });
 
   Future<List<CategoryModel>> findAll() async {
-    final result = await restClient.get('http://10.24.24.155:8080/categorias');
+    final result = await restClient.get('/categorias');
     log(result.request!.url.toString());
     if (result.hasError) {
       throw Exception('Erro ao buscar Categoria (${result.statusText})');

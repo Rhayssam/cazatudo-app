@@ -1,4 +1,5 @@
 // Essenciais
+import 'package:cazatudo_app/app/core/bindings/application_bindings.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.splash,
       getPages: AppPages.pages,
+      initialBinding: ApplicationBindings(),
     );
   }
 }
