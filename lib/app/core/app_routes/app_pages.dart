@@ -1,5 +1,7 @@
 // Essenciais
 import 'package:cazatudo_app/app/modules/categories/category_controller.dart';
+import 'package:cazatudo_app/app/modules/navigation/navigation_bindings.dart';
+import 'package:cazatudo_app/app/modules/navigation/navigation_page.dart';
 import 'package:cazatudo_app/app/modules/product/product_page.dart';
 import 'package:cazatudo_app/app/repositories/category_repository.dart';
 import 'package:get/get.dart';
@@ -14,7 +16,6 @@ import 'package:cazatudo_app/app/modules/splash/splash_page.dart';
 import 'package:cazatudo_app/app/modules/notifies/notification_page.dart';
 import 'package:cazatudo_app/app/modules/profile/profile_page.dart';
 import 'package:cazatudo_app/app/modules/search/search_page.dart';
-import 'package:cazatudo_app/app/modules/home/navigation_screen.dart';
 import 'package:cazatudo_app/app/modules/cart/cart_page.dart';
 import 'package:cazatudo_app/app/modules/categories/categories_page.dart';
 import 'package:cazatudo_app/app/modules/favorite/favorite_page.dart';
@@ -55,12 +56,6 @@ class AppPages {
     ),
     GetPage(
       name: AppRoutes.categories,
-      binding: BindingsBuilder(
-        () {
-          Get.lazyPut(() => CategoryRepository());
-          Get.put(CategoryController(repository: Get.find()));
-        },
-      ),
       page: () => CategoriesPage(),
     ),
     GetPage(
@@ -77,13 +72,8 @@ class AppPages {
     ),
     GetPage(
       name: AppRoutes.navigation,
-      page: () => NavigationScreen(),
-      binding: BindingsBuilder(
-        () {
-          Get.lazyPut(() => CategoryRepository());
-          Get.put(CategoryController(repository: Get.find()));
-        },
-      ),
+      page: () => NavigationPage(),
+      binding: NavigationBindings(),
     ),
     GetPage(
       name: AppRoutes.product,
