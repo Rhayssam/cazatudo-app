@@ -1,5 +1,5 @@
 // Essenciais
-import 'package:cazatudo_app/app/modules/categories/category_controller.dart';
+import 'package:cazatudo_app/app/modules/categories/group_controller.dart';
 import 'package:cazatudo_app/app/modules/navigation/navigation_bindings.dart';
 import 'package:cazatudo_app/app/modules/navigation/navigation_page.dart';
 import 'package:cazatudo_app/app/modules/product/product_page.dart';

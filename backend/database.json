@@ -1,38 +1,35 @@
 {
-  "categorias": [
-    { "id": 1, "name": "Móveis" },
-    { "id": 2, "name": "Decoração" },
-    { "id": 3, "name": "Banheiro" },
-    { "id": 4, "name": "Portas" },
-    { "id": 5, "name": "Iluminação" },
-    { "id": 6, "name": "Eletroportáteis" },
-    { "id": 7, "name": "Ar e ventilação" },
-    { "id": 8, "name": "Cama, Mesa e Banho" },
-    { "id": 9, "name": "Utilidades Domésticas" },
-    { "id": 10, "name": "Jardim e Lazer" },
-    { "id": 11, "name": "Ferramentas" }
-  ],
-  
-  "setores": [
-    { "id": 1, "name": "Sala de estar" },
-    { "id": 2, "name": "Cozinha" },
-    { "id": 3, "name": "Sala de Jantar" },
-    { "id": 4, "name": "Quarto" },
-    { "id": 5, "name": "Quarto infantil" },
-    { "id": 6, "name": "Quarto de bebê" },
-    { "id": 7, "name": "Banheiro" },
-    { "id": 8, "name": "Lavanderia" },
-    { "id": 9, "name": "Jardim" }
+  "group": [
+    { "id": 1, "name": "Móveis", "type": 1 },
+    { "id": 2, "name": "Decoração", "type": 1 },
+    { "id": 3, "name": "Banheiro", "type": 1 },
+    { "id": 4, "name": "Portas", "type": 1 },
+    { "id": 5, "name": "Iluminação", "type": 1 },
+    { "id": 6, "name": "Eletroportáteis", "type": 1 },
+    { "id": 7, "name": "Ar e ventilação", "type": 1 },
+    { "id": 8, "name": "Cama, Mesa e Banho", "type": 1 },
+    { "id": 9, "name": "Utilidades Domésticas", "type": 1 },
+    { "id": 10, "name": "Jardim e Lazer", "type": 1 },
+    { "id": 11, "name": "Ferramentas", "type": 1 },
+    { "id": 12, "name": "Sala de estar", "type": 2 },
+    { "id": 13, "name": "Cozinha", "type": 2 },
+    { "id": 14, "name": "Sala de Jantar", "type": 2 },
+    { "id": 15, "name": "Quarto", "type": 2 },
+    { "id": 16, "name": "Quarto infantil", "type": 2 },
+    { "id": 17, "name": "Quarto de bebê", "type": 2 },
+    { "id": 18, "name": "Banheiro", "type": 2 },
+    { "id": 19, "name": "Lavanderia", "type": 2 },
+    { "id": 20, "name": "Jardim", "type": 2 }
   ],
 
   "banner": [
-    {"imagem": "imagem", "id_setor": 1},
-    {"imagem": "imagem", "id_setor": 2}
+    { "id" : 1, "imagem": "imagem", "id_setor": 1 }
   ],
 
 
   "produtos": [
     {
+      "id" : 1,
       "descricao": "Sofá médio",
       "categoria": 1,
       "setor": 1,
@@ -44,6 +41,7 @@
       "adicionado_carrinho": false
     },
     {
+      "id" : 2,
       "descricao": "Cama de casal",
       "categoria": 1,
       "setor": 4,
@@ -55,6 +53,7 @@
       "adicionado_carrinho": false
     },    
     {
+      "id" : 3,
       "descricao": "Guarda roupa",
       "categoria": 1,
       "setor": 4,
