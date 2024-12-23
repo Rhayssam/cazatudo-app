@@ -4,7 +4,7 @@ import 'dart:developer';
 import 'package:cazatudo_app/app/core/widgets/new_categories_button.dart';
 import 'package:cazatudo_app/app/core/widgets/spacing.dart';
 import 'package:cazatudo_app/app/core/widgets/topic_title.dart';
-import 'package:cazatudo_app/app/modules/categories/group_controller.dart';
+import 'package:cazatudo_app/app/modules/groups/group_controller.dart';
 import 'package:flutter/material.dart';
 
 // Rotas
@@ -20,8 +20,8 @@ import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
 // Widgets Personalizados
 import 'package:get/get.dart';
 
-class CategoriesPage extends GetView<GroupController> {
-  const CategoriesPage({super.key});
+class GroupsPage extends GetView<GroupController> {
+  const GroupsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -49,73 +49,46 @@ class CategoriesPage extends GetView<GroupController> {
             titulo: 'Categorias',
             color: ThemeConfig.grey,
           ),
-          controller.obx(
-            (state) {
-              if (state == null) {
-                return Center(
-                  child: Text('Nenhuma categoria cadastrada'),
-                );
-              }
+          Obx(
+            () {
               return SliverList(
                 delegate: SliverChildBuilderDelegate(
                   (context, index) {
-                    final category = state[index];
-                    if (category.type == 1) {
-                      return NewCategoriesButton(
-                        text: category.name,
-                        onPressed: () {},
-                      );
-                    }
-                    return null;
+                    final category = controller.categories[index];
+                    return NewCategoriesButton(
+                      text: category.name,
+                      onPressed: () {},
+                    );
                   },
-                  childCount: state.length,
+                  childCount: controller.categories.length,
                 ),
               );
             },
-            onLoading: SliverToBoxAdapter(
-              child: CircularProgressIndicator(),
-            ),
-            onEmpty: SliverToBoxAdapter(),
-            onError: (e) => SliverToBoxAdapter(),
           ),
           Spacing(height: 15),
           TopicTitle(
             titulo: 'Setores',
             color: ThemeConfig.grey,
           ),
-          controller.obx(
-            (state) {
-              log(state.toString());
-              if (state == null) {
-                return Center(
-                  child: Text('Nenhuma categoria cadastrada'),
-                );
-              }
+          Obx(
+            () {
               return SliverList(
                 delegate: SliverChildBuilderDelegate(
                   (context, index) {
-                    final category = state[index];
+                    final category = controller.sectors[index];
                     log(category.toString());
                     log(index.toString());
-                    if (category.type == 2) {
-                      return NewCategoriesButton(
-                        text: category.name,
-                        onPressed: () {},
-                      );
-                    }
-                    return Container();
+                    return NewCategoriesButton(
+                      text: category.name,
+                      onPressed: () {},
+                    );
 
                     // return null;
                   },
-                  childCount: state.length,
+                  childCount: controller.sectors.length,
                 ),
               );
             },
-            onLoading: SliverToBoxAdapter(
-              child: CircularProgressIndicator(),
-            ),
-            onEmpty: SliverToBoxAdapter(),
-            onError: (e) => SliverToBoxAdapter(),
           ),
           Spacing(height: 15),
         ],

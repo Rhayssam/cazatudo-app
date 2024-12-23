@@ -1,5 +1,5 @@
 import 'package:cazatudo_app/app/core/rest_client/rest_client.dart';
-import 'package:cazatudo_app/app/modules/categories/group_controller.dart';
+import 'package:cazatudo_app/app/modules/groups/group_controller.dart';
 import 'package:cazatudo_app/app/repositories/category_repository.dart';
 import 'package:cazatudo_app/app/repositories/group_repository.dart';
 import 'package:get/get.dart';

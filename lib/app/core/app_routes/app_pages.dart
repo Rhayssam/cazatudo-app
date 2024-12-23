@@ -1,5 +1,5 @@
 // Essenciais
-import 'package:cazatudo_app/app/modules/categories/group_controller.dart';
+import 'package:cazatudo_app/app/modules/groups/group_controller.dart';
 import 'package:cazatudo_app/app/modules/navigation/navigation_bindings.dart';
 import 'package:cazatudo_app/app/modules/navigation/navigation_page.dart';
 import 'package:cazatudo_app/app/modules/product/product_page.dart';
@@ -17,7 +17,7 @@ import 'package:cazatudo_app/app/modules/notifies/notification_page.dart';
 import 'package:cazatudo_app/app/modules/profile/profile_page.dart';
 import 'package:cazatudo_app/app/modules/search/search_page.dart';
 import 'package:cazatudo_app/app/modules/cart/cart_page.dart';
-import 'package:cazatudo_app/app/modules/categories/categories_page.dart';
+import 'package:cazatudo_app/app/modules/groups/groups_page.dart';
 import 'package:cazatudo_app/app/modules/favorite/favorite_page.dart';
 
 // Para utilizar as rotas basta apenas utilizar o comando
@@ -56,7 +56,7 @@ class AppPages {
     ),
     GetPage(
       name: AppRoutes.categories,
-      page: () => CategoriesPage(),
+      page: () => GroupsPage(),
     ),
     GetPage(
       name: AppRoutes.favorites,

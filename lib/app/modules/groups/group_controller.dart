@@ -11,6 +11,9 @@ class GroupController extends GetxController with StateMixin<List<GroupModel>> {
     required GroupRepository repository,
   }) : _repository = repository;
 
+  final RxList<GroupModel> categories = RxList.empty();
+  final RxList<GroupModel> sectors = RxList.empty();
+
   void onReady() {
     _findAll();
     super.onReady();
@@ -18,16 +21,14 @@ class GroupController extends GetxController with StateMixin<List<GroupModel>> {
 
   Future<void> _findAll() async {
     try {
-      change([], status: RxStatus.loading());
-      final users = await _repository.findAll();
-      var statusReturn = RxStatus.success();
-      if (users.isEmpty) {
-        statusReturn = RxStatus.empty();
+      final groups = await _repository.findAll();
+      if (groups.isNotEmpty) {
+        categories.value =
+            groups.where((category) => category.type == 1).toList();
+        sectors.value = groups.where((sector) => sector.type == 2).toList();
       }
-      change(users, status: statusReturn);
     } catch (e, s) {
       log('Erro ao buscar grupos', error: e, stackTrace: s);
-      change(state, status: RxStatus.error());
     }
   }
 
