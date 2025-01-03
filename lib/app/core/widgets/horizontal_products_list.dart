@@ -11,8 +11,8 @@ import 'package:get/get.dart';
 
 class HorizontalProductsList extends StatefulWidget {
   final String texto;
-  final String valorAntigo;
-  final String valorPix;
+  final double valorAntigo;
+  final double valorPix;
 
   const HorizontalProductsList({
     Key? key,

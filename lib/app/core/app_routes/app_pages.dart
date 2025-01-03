@@ -1,12 +1,10 @@
 // Essenciais
-import 'package:cazatudo_app/app/modules/groups/group_controller.dart';
-import 'package:cazatudo_app/app/modules/navigation/navigation_bindings.dart';
-import 'package:cazatudo_app/app/modules/navigation/navigation_page.dart';
-import 'package:cazatudo_app/app/modules/product/product_page.dart';
-import 'package:cazatudo_app/app/repositories/category_repository.dart';
 import 'package:get/get.dart';
 
 // Rotas
+import 'package:cazatudo_app/app/modules/navigation/navigation_bindings.dart';
+import 'package:cazatudo_app/app/modules/navigation/navigation_page.dart';
+import 'package:cazatudo_app/app/modules/product/product_page.dart';
 import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
 import 'package:cazatudo_app/app/modules/home/home_page.dart';
 import 'package:cazatudo_app/app/modules/onboard/onboard_page.dart';

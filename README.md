@@ -1,12 +1,17 @@
 # cazatudo_app
 
-A new Flutter project.
+O cazatudo_app, como o próprio nome sugere, é um aplicativo criado para e-commerce da loja cazatudo.
 
-## Getting Started
+## Rodando o projeto
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
+Ao rodar o projeto, não se esqueça de digitar o comando para acessar a pasta backend
+```
+cd backend
+```
+Em seguida, rode o comando para iniciar o server do backend 
+```
+jrs run
+```
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)

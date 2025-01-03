@@ -1,8 +1,7 @@
 // Essenciais
-import 'package:cazatudo_app/app/core/widgets/horizontal_list.dart';
-import 'package:cazatudo_app/app/core/widgets/horizontal_products_list.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter/material.dart';
+import 'package:cazatudo_app/app/modules/home/home_controller.dart';
 
 // Rotas
 import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
@@ -14,20 +13,15 @@ import 'package:cazatudo_app/app/core/widgets/sliver_app_bar.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_search.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
 // Widgets Personalizados
+import 'package:cazatudo_app/app/core/widgets/horizontal_products_list.dart';
+import 'package:cazatudo_app/app/core/widgets/horizontal_list.dart';
 import 'package:cazatudo_app/app/core/widgets/banner_widget.dart';
 import 'package:cazatudo_app/app/core/widgets/topic_title.dart';
 import 'package:cazatudo_app/app/core/widgets/horizontal_categories_list.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends GetView<HomeController> {
   const HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-final _controlPage = PageController();
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,22 +54,51 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
           TopicTitle(titulo: 'Novidades', color: ThemeConfig.orange1),
-          HorizontalList(
-            children: [
-              HorizontalProductsList(
-                texto: 'Cama exemplo',
-                valorAntigo: '700,00',
-                valorPix: '500,00',
-              ),
-              HorizontalProductsList(
-                texto: 'Guarda roupa exemplo',
-                valorAntigo: '1500,00',
-                valorPix: '1200,00',
-              ),
-            ],
+
+          //* Aqui serão adicionados os cards dos produtos
+          // Obx(
+          //   () {
+          //     return SliverList(
+          //       delegate: SliverChildBuilderDelegate(
+          //         (context, index) {
+          //           final product = controller.products[index];
+          //           return HorizontalProductsList(
+          //             texto: product.descricao,
+          //             valorAntigo: product.valorAnterior,
+          //             valorPix: product.valorPix,
+          //           );
+          //         },
+          //         childCount: controller.products.length,
+          //       ),
+          //     );
+          //   },
+          // ),
+
+          Obx(
+            () {
+              if (controller.products.isEmpty) {
+                return SliverToBoxAdapter(
+                  child: Center(
+                    child: Text('Nenhum produto disponível'),
+                  ),
+                );
+              }
+
+              return HorizontalList(
+                children: controller.products.map((product) {
+                  return HorizontalProductsList(
+                    texto: product.descricao,
+                    valorAntigo: product.valorAnterior,
+                    valorPix: product.valorPix,
+                  );
+                }).toList(),
+              );
+            },
           ),
         ],
       ),
     );
   }
 }
+
+final _controlPage = PageController();

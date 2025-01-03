@@ -1,11 +1,9 @@
 // Essenciais
+import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 import 'dart:developer';
 
-import 'package:cazatudo_app/app/core/widgets/new_categories_button.dart';
-import 'package:cazatudo_app/app/core/widgets/spacing.dart';
-import 'package:cazatudo_app/app/core/widgets/topic_title.dart';
 import 'package:cazatudo_app/app/modules/groups/group_controller.dart';
-import 'package:flutter/material.dart';
 
 // Rotas
 import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
@@ -18,7 +16,9 @@ import 'package:cazatudo_app/app/core/widgets/sliver_app_bar.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_search.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
 // Widgets Personalizados
-import 'package:get/get.dart';
+import 'package:cazatudo_app/app/core/widgets/new_categories_button.dart';
+import 'package:cazatudo_app/app/core/widgets/spacing.dart';
+import 'package:cazatudo_app/app/core/widgets/topic_title.dart';
 
 class GroupsPage extends GetView<GroupController> {
   const GroupsPage({super.key});
@@ -72,6 +72,13 @@ class GroupsPage extends GetView<GroupController> {
           ),
           Obx(
             () {
+              if (controller.categories.isEmpty) {
+                return SliverToBoxAdapter(
+                  child: Center(
+                    child: Text('Nenhuma categoria disponível'),
+                  ),
+                );
+              }
               return SliverList(
                 delegate: SliverChildBuilderDelegate(
                   (context, index) {

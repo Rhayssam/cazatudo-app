@@ -28,14 +28,14 @@
   ],
 
 
-  "produtos": [
+  "product": [
     {
       "id" : 1,
       "descricao": "Sofá médio",
       "categoria": 1,
       "setor": 1,
-      "valor_anterior": 1000,
-      "valor_pix": 800,
+      "valor_anterior": 1000.00,
+      "valor_pix": 800.00,
       "parcelas": 5,
       "valor_parcelas": 50,
       "favoritado": false,
@@ -46,8 +46,8 @@
       "descricao": "Cama de casal",
       "categoria": 1,
       "setor": 4,
-      "valor_anterior": 100,
-      "valor_pix": 111,
+      "valor_anterior": 100.00,
+      "valor_pix": 111.00,
       "parcelas": 5,
       "valor_parcelas": 50,
       "favoritado": false,

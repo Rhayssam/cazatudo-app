@@ -15,8 +15,8 @@ class GroupController extends GetxController with StateMixin<List<GroupModel>> {
   final RxList<GroupModel> sectors = RxList.empty();
 
   void onReady() {
-    _findAll();
     super.onReady();
+    _findAll();
   }
 
   Future<void> _findAll() async {

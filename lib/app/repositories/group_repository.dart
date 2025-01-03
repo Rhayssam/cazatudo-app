@@ -1,11 +1,9 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:developer';
 
 import 'package:cazatudo_app/app/models/group_model.dart';
 import 'package:get/get.dart';
 
 import 'package:cazatudo_app/app/core/rest_client/rest_client.dart';
-import 'package:cazatudo_app/app/models/category_model.dart';
 
 class GroupRepository extends GetConnect {
   final RestClient restClient;
