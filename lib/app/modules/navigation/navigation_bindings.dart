@@ -1,9 +1,14 @@
+// Essenciais
+import 'package:get/get.dart';
+
+// Controller
+import './navigation_controller.dart';
 import 'package:cazatudo_app/app/modules/groups/group_controller.dart';
 import 'package:cazatudo_app/app/modules/home/home_controller.dart';
+
+// Repository
 import 'package:cazatudo_app/app/repositories/group_repository.dart';
 import 'package:cazatudo_app/app/repositories/product_repository.dart';
-import 'package:get/get.dart';
-import './navigation_controller.dart';
 
 class NavigationBindings implements Bindings {
   @override

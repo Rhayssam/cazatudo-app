@@ -1,11 +1,18 @@
+// Essenciais
+import 'package:get/get.dart';
+import 'package:flutter/material.dart';
+
+// Rotas
 import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
+
+// UI
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
+
+// Widgets
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_title.dart';
 import 'package:cazatudo_app/app/core/widgets/empty_view.dart';
 import 'package:cazatudo_app/app/core/widgets/sliver_app_bar.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class ProductPage extends StatelessWidget {
   const ProductPage({super.key});

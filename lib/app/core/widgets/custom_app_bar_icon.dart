@@ -1,6 +1,8 @@
 // Essenciais
-import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 import 'package:flutter/material.dart';
+
+// UI
+import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 
 class CustomAppBarIcon extends StatelessWidget {
   final IconData icon;

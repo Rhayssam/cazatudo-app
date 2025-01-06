@@ -1,4 +1,5 @@
 // Essenciais
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
 // Rotas
@@ -13,7 +14,6 @@ import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
 import 'package:cazatudo_app/app/core/widgets/sliver_app_bar.dart';
 // Widgets Personalizados
 import 'package:cazatudo_app/app/core/widgets/empty_view.dart';
-import 'package:get/get.dart';
 
 class FavoritePage extends StatelessWidget {
   const FavoritePage({super.key});

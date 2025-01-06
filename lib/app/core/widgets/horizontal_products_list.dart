@@ -1,4 +1,5 @@
 // Essenciais
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
 // Rotas
@@ -7,7 +8,6 @@ import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
 // UI
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
-import 'package:get/get.dart';
 
 class HorizontalProductsList extends StatefulWidget {
   final String texto;

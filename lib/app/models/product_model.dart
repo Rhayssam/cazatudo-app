@@ -1,3 +1,4 @@
+// Essenciais
 import 'dart:convert';
 
 class ProductModel {

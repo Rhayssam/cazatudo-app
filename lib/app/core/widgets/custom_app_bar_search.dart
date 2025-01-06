@@ -1,6 +1,6 @@
 // Essenciais
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 
 // Rotas
 import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';

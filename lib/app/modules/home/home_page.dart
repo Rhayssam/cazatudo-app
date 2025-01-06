@@ -1,13 +1,12 @@
 // Essenciais
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+// Controller
 import 'package:cazatudo_app/app/modules/home/home_controller.dart';
-
 // Rotas
 import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
 // UI
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
-
 // Widgets Personalizados - AppBar
 import 'package:cazatudo_app/app/core/widgets/sliver_app_bar.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_search.dart';

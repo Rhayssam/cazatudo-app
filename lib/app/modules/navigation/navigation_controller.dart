@@ -1,5 +1,6 @@
-import 'package:flutter/widgets.dart';
+// Essenciais
 import 'package:get/get.dart';
+import 'package:flutter/widgets.dart';
 
 class NavigationController extends GetxController {
   final RxInt currentIndex = 0.obs;

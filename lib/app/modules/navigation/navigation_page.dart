@@ -1,13 +1,20 @@
+// Essenciais
+import 'package:get/get.dart';
+import 'package:flutter/material.dart';
+
+// UI
 import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
+
+// Controller
 import 'package:cazatudo_app/app/modules/navigation/navigation_controller.dart';
-import 'package:flutter/material.dart';
+
+// Pages
+import 'package:cazatudo_app/app/modules/home/home_page.dart';
 import 'package:cazatudo_app/app/modules/groups/groups_page.dart';
 import 'package:cazatudo_app/app/modules/favorite/favorite_page.dart';
-import 'package:cazatudo_app/app/modules/home/home_page.dart';
 import 'package:cazatudo_app/app/modules/notifies/notification_page.dart';
 import 'package:cazatudo_app/app/modules/login/login_page.dart';
-import 'package:get/get.dart';
 
 class NavigationPage extends GetView<NavigationController> {
   NavigationPage({super.key});

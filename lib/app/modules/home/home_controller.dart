@@ -2,8 +2,10 @@
 import 'package:get/get.dart';
 import 'dart:developer';
 
+// Model
 import 'package:cazatudo_app/app/models/group_model.dart';
 import 'package:cazatudo_app/app/models/product_model.dart';
+// Repository
 import 'package:cazatudo_app/app/repositories/product_repository.dart';
 
 class HomeController extends GetxController with StateMixin<List<GroupModel>> {

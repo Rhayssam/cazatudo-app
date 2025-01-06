@@ -1,8 +1,11 @@
+// Essenciais
+import 'package:get/get.dart';
 import 'dart:developer';
 
+// Model
 import 'package:cazatudo_app/app/models/group_model.dart';
+// Repository
 import 'package:cazatudo_app/app/repositories/group_repository.dart';
-import 'package:get/get.dart';
 
 class GroupController extends GetxController with StateMixin<List<GroupModel>> {
   final GroupRepository _repository;
