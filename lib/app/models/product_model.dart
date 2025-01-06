@@ -45,12 +45,12 @@ class ProductModel {
       descricao: (map['descricao'] ?? '') as String,
       categoria: (map['categoria'] ?? 0) as int,
       setor: (map['setor'] ?? 0) as int,
-      valorAnterior: (map['valorAnterior'] ?? 0.0) as double,
-      valorPix: (map['valorPix'] ?? 0.0) as double,
+      valorAnterior: (map['valor_anterior'] ?? 0.0) as double,
+      valorPix: (map['valor_pix'] ?? 0.0) as double,
       parcelas: (map['parcelas'] ?? 0) as int,
-      valorParcelas: (map['valorParcelas'] ?? 0.0) as double,
+      valorParcelas: (map['valor_parcelas'] ?? 0.0) as double,
       favoritado: (map['favoritado'] ?? false) as bool,
-      adicionadoCarrinho: (map['adicionadoCarrinho'] ?? false) as bool,
+      adicionadoCarrinho: (map['adicionado_carrinho'] ?? false) as bool,
     );
   }
 
