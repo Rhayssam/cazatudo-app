@@ -23,6 +23,14 @@
     { "id": 20, "name": "Jardim", "type": 2 }
   ],
 
+  "homeOptions": [
+    {"id": 1, "name": "Categorias", "image":""},
+    {"id": 2, "name": "Ofertas", "image":""},
+    {"id": 3, "name": "Relâmpago", "image":""},
+    {"id": 4, "name": "Cupons", "image":""},
+    {"id": 5, "name": "Frete", "image":""}
+  ],
+
   "banner": [
     { "id" : 1, "imagem": "imagem", "id_setor": 1 }
   ],
@@ -34,36 +42,36 @@
       "descricao": "Sofá médio",
       "categoria": 1,
       "setor": 1,
-      "valor_anterior": 1000.00,
-      "valor_pix": 800.00,
+      "valorAnterior": 1000.00,
+      "valorPix": 800.00,
       "parcelas": 5,
-      "valor_parcelas": 50.00,
+      "valorParcelas": 50.00,
       "favoritado": false,
-      "adicionado_carrinho": false
+      "adicionadoCarrinho": false
     },
     {
       "id" : 2,
       "descricao": "Cama de casal",
       "categoria": 1,
       "setor": 4,
-      "valor_anterior": 100.00,
-      "valor_pix": 111.00,
+      "valorAnterior": 100.00,
+      "valorPix": 111.00,
       "parcelas": 5,
-      "valor_parcelas": 50.00,
+      "valorParcelas": 50.00,
       "favoritado": false,
-      "adicionado_carrinho": false
+      "adicionadoCarrinho": false
     },    
     {
       "id" : 3,
       "descricao": "Guarda roupa",
       "categoria": 1,
       "setor": 4,
-      "valor_anterior": 100.00,
-      "valor_pix": 111.00,
+      "valorAnterior": 100.00,
+      "valorPix": 111.00,
       "parcelas": 5,
-      "valor_parcelas": 50.00,
+      "valorParcelas": 50.00,
       "favoritado": false,
-      "adicionado_carrinho": false
+      "adicionadoCarrinho": false
     }
   ]
 }

@@ -1,9 +1,10 @@
-import 'dart:developer';
-
-import 'package:cazatudo_app/app/models/group_model.dart';
+// Essenciais
 import 'package:get/get.dart';
-
+import 'dart:developer';
 import 'package:cazatudo_app/app/core/rest_client/rest_client.dart';
+
+// Model
+import 'package:cazatudo_app/app/models/group_model.dart';
 
 class GroupRepository extends GetConnect {
   final RestClient restClient;

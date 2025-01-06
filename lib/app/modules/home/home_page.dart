@@ -54,26 +54,6 @@ class HomePage extends GetView<HomeController> {
             ],
           ),
           TopicTitle(titulo: 'Novidades', color: ThemeConfig.orange1),
-
-          //* Aqui serão adicionados os cards dos produtos
-          // Obx(
-          //   () {
-          //     return SliverList(
-          //       delegate: SliverChildBuilderDelegate(
-          //         (context, index) {
-          //           final product = controller.products[index];
-          //           return HorizontalProductsList(
-          //             texto: product.descricao,
-          //             valorAntigo: product.valorAnterior,
-          //             valorPix: product.valorPix,
-          //           );
-          //         },
-          //         childCount: controller.products.length,
-          //       ),
-          //     );
-          //   },
-          // ),
-
           Obx(
             () {
               if (controller.products.isEmpty) {
@@ -83,7 +63,6 @@ class HomePage extends GetView<HomeController> {
                   ),
                 );
               }
-
               return HorizontalList(
                 children: controller.products.map((product) {
                   return HorizontalProductsList(

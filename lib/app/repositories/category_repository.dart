@@ -1,9 +1,9 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'dart:developer';
-
+// Essenciais
 import 'package:get/get.dart';
-
+import 'dart:developer';
 import 'package:cazatudo_app/app/core/rest_client/rest_client.dart';
+
+// Model
 import 'package:cazatudo_app/app/models/category_model.dart';
 
 class CategoryRepository extends GetConnect {
