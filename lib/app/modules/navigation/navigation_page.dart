@@ -14,7 +14,7 @@ import 'package:cazatudo_app/app/modules/home/home_page.dart';
 import 'package:cazatudo_app/app/modules/groups/groups_page.dart';
 import 'package:cazatudo_app/app/modules/favorite/favorite_page.dart';
 import 'package:cazatudo_app/app/modules/notifies/notification_page.dart';
-import 'package:cazatudo_app/app/modules/login/login_page.dart';
+import 'package:cazatudo_app/app/modules/auth/login/login_page.dart';
 
 class NavigationPage extends GetView<NavigationController> {
   NavigationPage({super.key});

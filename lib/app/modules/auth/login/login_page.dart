@@ -69,19 +69,6 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(height: 10),
               Center(
-                child: SignInButton(
-                  Buttons.google,
-                  onPressed: () {},
-                  // TODO - Fazer a implementação do login via Firebase
-                  text: 'Continue com o Google',
-                  shape: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide.none,
-                  ),
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                ),
-              ),
-              Center(
                 child: MultiTextButton(
                   onPressed: () {
                     Get.toNamed(AppRoutes.signUp);

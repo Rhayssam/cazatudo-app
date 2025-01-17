@@ -1,44 +1,169 @@
-{  
-
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "rhayssam",
+      "email": "rhayssam@email.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "name": "elemento",
+      "email": "elemento1@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "name": "elemento2",
+      "email": "elemento2@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 4,
+      "name": "gabao",
+      "email": "gabao@email.com",
+      "password": "123456"
+    }
+  ],
   "group": [
-    { "id": 1, "name": "Móveis", "type": 1 },
-    { "id": 2, "name": "Decoração", "type": 1 },
-    { "id": 3, "name": "Banheiro", "type": 1 },
-    { "id": 4, "name": "Portas", "type": 1 },
-    { "id": 5, "name": "Iluminação", "type": 1 },
-    { "id": 6, "name": "Eletroportáteis", "type": 1 },
-    { "id": 7, "name": "Ar e ventilação", "type": 1 },
-    { "id": 8, "name": "Cama, Mesa e Banho", "type": 1 },
-    { "id": 9, "name": "Utilidades Domésticas", "type": 1 },
-    { "id": 10, "name": "Jardim e Lazer", "type": 1 },
-    { "id": 11, "name": "Ferramentas", "type": 1 },
-    { "id": 12, "name": "Sala de estar", "type": 2 },
-    { "id": 13, "name": "Cozinha", "type": 2 },
-    { "id": 14, "name": "Sala de Jantar", "type": 2 },
-    { "id": 15, "name": "Quarto", "type": 2 },
-    { "id": 16, "name": "Quarto infantil", "type": 2 },
-    { "id": 17, "name": "Quarto de bebê", "type": 2 },
-    { "id": 18, "name": "Banheiro", "type": 2 },
-    { "id": 19, "name": "Lavanderia", "type": 2 },
-    { "id": 20, "name": "Jardim", "type": 2 }
+    {
+      "id": 1,
+      "name": "Móveis",
+      "type": 1
+    },
+    {
+      "id": 2,
+      "name": "Decoração",
+      "type": 1
+    },
+    {
+      "id": 3,
+      "name": "Banheiro",
+      "type": 1
+    },
+    {
+      "id": 4,
+      "name": "Portas",
+      "type": 1
+    },
+    {
+      "id": 5,
+      "name": "Iluminação",
+      "type": 1
+    },
+    {
+      "id": 6,
+      "name": "Eletroportáteis",
+      "type": 1
+    },
+    {
+      "id": 7,
+      "name": "Ar e ventilação",
+      "type": 1
+    },
+    {
+      "id": 8,
+      "name": "Cama, Mesa e Banho",
+      "type": 1
+    },
+    {
+      "id": 9,
+      "name": "Utilidades Domésticas",
+      "type": 1
+    },
+    {
+      "id": 10,
+      "name": "Jardim e Lazer",
+      "type": 1
+    },
+    {
+      "id": 11,
+      "name": "Ferramentas",
+      "type": 1
+    },
+    {
+      "id": 12,
+      "name": "Sala de estar",
+      "type": 2
+    },
+    {
+      "id": 13,
+      "name": "Cozinha",
+      "type": 2
+    },
+    {
+      "id": 14,
+      "name": "Sala de Jantar",
+      "type": 2
+    },
+    {
+      "id": 15,
+      "name": "Quarto",
+      "type": 2
+    },
+    {
+      "id": 16,
+      "name": "Quarto infantil",
+      "type": 2
+    },
+    {
+      "id": 17,
+      "name": "Quarto de bebê",
+      "type": 2
+    },
+    {
+      "id": 18,
+      "name": "Banheiro",
+      "type": 2
+    },
+    {
+      "id": 19,
+      "name": "Lavanderia",
+      "type": 2
+    },
+    {
+      "id": 20,
+      "name": "Jardim",
+      "type": 2
+    }
   ],
-
   "homeOptions": [
-    {"id": 1, "name": "Categorias", "image":""},
-    {"id": 2, "name": "Ofertas", "image":""},
-    {"id": 3, "name": "Relâmpago", "image":""},
-    {"id": 4, "name": "Cupons", "image":""},
-    {"id": 5, "name": "Frete", "image":""}
+    {
+      "id": 1,
+      "name": "Categorias",
+      "image": ""
+    },
+    {
+      "id": 2,
+      "name": "Ofertas",
+      "image": ""
+    },
+    {
+      "id": 3,
+      "name": "Relâmpago",
+      "image": ""
+    },
+    {
+      "id": 4,
+      "name": "Cupons",
+      "image": ""
+    },
+    {
+      "id": 5,
+      "name": "Frete",
+      "image": ""
+    }
   ],
-
   "banner": [
-    { "id" : 1, "imagem": "imagem", "id_setor": 1 }
+    {
+      "id": 1,
+      "imagem": "imagem",
+      "id_setor": 1
+    }
   ],
-
-
   "product": [
     {
-      "id" : 1,
+      "id": 1,
       "descricao": "Sofá médio",
       "categoria": 1,
       "setor": 1,
@@ -50,7 +175,7 @@
       "adicionadoCarrinho": false
     },
     {
-      "id" : 2,
+      "id": 2,
       "descricao": "Cama de casal",
       "categoria": 1,
       "setor": 4,
@@ -60,9 +185,9 @@
       "valorParcelas": 50.00,
       "favoritado": false,
       "adicionadoCarrinho": false
-    },    
+    },
     {
-      "id" : 3,
+      "id": 3,
       "descricao": "Guarda roupa",
       "categoria": 1,
       "setor": 4,
@@ -75,4 +200,3 @@
     }
   ]
 }
-  

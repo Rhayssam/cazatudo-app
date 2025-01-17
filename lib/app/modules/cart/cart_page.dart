@@ -29,7 +29,7 @@ class CartPage extends StatelessWidget {
               ),
               CustomAppBarIcon(
                 onPressed: () {
-                  Get.toNamed('/navigation');
+                  Get.back();
                 },
                 icon: Icons.arrow_back_ios,
               ),
