@@ -1,9 +1,9 @@
-import 'package:get/get.dart';
-import 'package:cazatudo_app/app/modules/auth/login/login_controller.dart';
+import 'package:cazatudo_app/app/modules/auth/sign_up/sign_up_controller.dart';
 import 'package:cazatudo_app/app/repositories/auth/auth_repository.dart';
 import 'package:cazatudo_app/app/repositories/auth/auth_repository_impl.dart';
+import 'package:get/get.dart';
 
-class LoginBindings implements Bindings {
+class SignUpBindings implements Bindings {
   @override
   void dependencies() {
     Get.lazyPut<AuthRepository>(
@@ -11,9 +11,8 @@ class LoginBindings implements Bindings {
         restClient: Get.find(),
       ),
     );
-
     Get.lazyPut(
-      () => LoginController(authRepository: Get.find()),
+      () => SignUpController(authRepository: Get.find()),
     );
   }
 }

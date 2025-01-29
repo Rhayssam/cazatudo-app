@@ -34,4 +34,14 @@ class ThemeConfig {
   // Colors
   static const Color orange1 = Color(0xFFF16C04);
   static const Color lightOrange = Color(0xFFFFC3A3);
+
+  static final ThemeData theme = ThemeData(
+    primaryColor: Color(0xFFF16C04),
+    primaryColorDark: Color(0xFF444444),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Color(0xFFF16C04),
+      ),
+    ),
+  );
 }

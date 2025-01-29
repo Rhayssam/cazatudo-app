@@ -1,4 +1,7 @@
 // Essenciais
+import 'package:cazatudo_app/app/modules/auth/login/login_bindings.dart';
+import 'package:cazatudo_app/app/modules/auth/sign_up/sign_up_bindings.dart';
+import 'package:cazatudo_app/app/modules/onboard/onboard_bindings.dart';
 import 'package:get/get.dart';
 
 // Rotas
@@ -27,6 +30,7 @@ class AppPages {
     GetPage(
       name: AppRoutes.initial,
       page: () => OnboardPage(),
+      binding: OnboardBindings(),
     ),
     GetPage(
       name: AppRoutes.splash,
@@ -35,10 +39,12 @@ class AppPages {
     GetPage(
       name: AppRoutes.login,
       page: () => LoginPage(),
+      binding: LoginBindings(),
     ),
     GetPage(
       name: AppRoutes.signUp,
       page: () => SignUpPage(),
+      binding: SignUpBindings(),
     ),
     GetPage(
       name: AppRoutes.home,
@@ -65,8 +71,8 @@ class AppPages {
       page: () => NotificationPage(),
     ),
     GetPage(
-      page: () => ProfilePage(),
       name: AppRoutes.profile,
+      page: () => ProfilePage(),
     ),
     GetPage(
       name: AppRoutes.navigation,

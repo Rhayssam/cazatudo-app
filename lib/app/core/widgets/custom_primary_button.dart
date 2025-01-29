@@ -1,38 +1,40 @@
 // Essenciais
 import 'package:flutter/material.dart';
-
-// UI
-import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
-import 'package:cazatudo_app/app/core/ui/theme_config.dart';
+import 'package:get/get.dart';
 
 class CustomPrimaryButton extends StatelessWidget {
-  final String text;
+  final VoidCallback? onPressed;
+  final String label;
+  final double? width;
+  final double? height;
+  final Colors? color;
 
   const CustomPrimaryButton({
-    Key? key,
-    required this.text,
-  }) : super(key: key);
+    super.key,
+    this.onPressed,
+    required this.label,
+    this.width,
+    this.height = 50,
+    this.color,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10),
-      child: Container(
-        alignment: Alignment.center,
-        width: double.infinity,
-        height: 44,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: ThemeConfig.orangeGradient,
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          ),
-          borderRadius: BorderRadius.circular(10),
-        ),
+    return SizedBox(
+      width: width,
+      height: height,
+      child: ElevatedButton(
+        onPressed: onPressed,
+        style: ElevatedButton.styleFrom(
+            shape: const StadiumBorder(),
+            backgroundColor: context.theme.primaryColor),
         child: Text(
-          text,
-          style:
-              CustomTextStyles.mediumText20.copyWith(color: ThemeConfig.white),
+          label,
+          style: const TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
         ),
       ),
     );

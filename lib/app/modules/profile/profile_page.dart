@@ -1,4 +1,5 @@
 // Essenciais
+import 'package:cazatudo_app/app/core/services/auth_service.dart';
 import 'package:flutter/material.dart';
 
 // UI
@@ -10,6 +11,7 @@ import 'package:cazatudo_app/app/core/widgets/custom_app_bar_title.dart';
 // Widgets Personalizados
 import 'package:cazatudo_app/app/core/widgets/profile_header.dart';
 import 'package:cazatudo_app/app/core/widgets/profile_options_button.dart';
+import 'package:get/get.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -60,7 +62,9 @@ class ProfilePage extends StatelessWidget {
           ),
           ProfileOptionsButton(
             text: 'Sair',
-            onPressed: () {},
+            onPressed: () {
+              Get.find<AuthService>().logout();
+            },
             icon: Icons.exit_to_app,
             isQuit: true,
           ),

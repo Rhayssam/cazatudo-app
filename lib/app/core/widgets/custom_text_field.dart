@@ -2,60 +2,45 @@
 import 'package:flutter/material.dart';
 
 // UI
-import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
     super.key,
-    required this.controller,
+    required this.label,
+    this.controller,
+    this.validator,
+    this.onChange,
+    this.obscureText = false,
     required this.icon,
-    required this.type,
-    required this.focusNode,
   });
 
-  final TextEditingController controller;
-  final IconData icon;
-  final String type;
-  final FocusNode focusNode;
+  final String label;
+  final TextEditingController? controller;
+  final bool obscureText;
+  final FormFieldValidator<String>? validator;
+  final ValueChanged<String>? onChange;
+  final Icon icon;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
-      child: Container(
-        height: 44,
-        decoration: BoxDecoration(
-          color: ThemeConfig.white,
-          borderRadius: BorderRadius.circular(5),
-        ),
-        child: TextField(
-          style:
-              CustomTextStyles.mediumText18.copyWith(color: ThemeConfig.grey),
-          controller: controller,
-          focusNode: focusNode,
-          decoration: InputDecoration(
-            hintText: type,
-            hintStyle: TextStyle(color: ThemeConfig.lightGrey),
-            prefixIcon: Icon(
-              icon,
-              color: focusNode.hasFocus
-                  ? ThemeConfig.orange1
-                  : ThemeConfig.lightGrey,
-            ),
-            contentPadding: EdgeInsets.symmetric(
-              horizontal: 15,
-              vertical: 15,
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(5),
-              borderSide: BorderSide(color: ThemeConfig.lightGrey, width: 2),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(5),
-              borderSide: BorderSide(color: ThemeConfig.orange1, width: 2),
-            ),
-          ),
+    return TextFormField(
+      controller: controller,
+      obscureText: obscureText,
+      validator: validator,
+      onChanged: onChange,
+      cursorColor: ThemeConfig.orange1,
+      decoration: InputDecoration(
+        hintText: label,
+        errorStyle: const TextStyle(color: Colors.redAccent),
+        labelStyle: const TextStyle(color: Colors.black),
+        filled: true,
+        fillColor: ThemeConfig.orange1.withOpacity(0.2),
+        prefixIcon: icon,
+        prefixIconColor: ThemeConfig.orange1,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(18),
+          borderSide: BorderSide.none,
         ),
       ),
     );
