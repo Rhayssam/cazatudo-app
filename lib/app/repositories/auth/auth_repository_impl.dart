@@ -34,6 +34,7 @@ class AuthRepositoryImpl implements AuthRepository {
   Future<UserModel> login(String email, String password) async {
     final result =
         await _restClient.get('/users?email=$email&password=$password');
+    log(result.body.toString());
     if (result.hasError) {
       if (result.statusCode == 403) {
         log(

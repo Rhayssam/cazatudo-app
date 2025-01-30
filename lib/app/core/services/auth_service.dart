@@ -1,3 +1,4 @@
+import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
 import 'package:cazatudo_app/app/core/constants/constants.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -13,9 +14,9 @@ class AuthService extends GetxService {
     });
     ever<bool?>(_isLogged, (isLogged) {
       if (isLogged == null || !isLogged) {
-        Get.offAllNamed('/login');
+        Get.offAllNamed(AppRoutes.login);
       } else {
-        Get.offAllNamed('/navigation');
+        Get.offAllNamed(AppRoutes.navigation);
       }
     });
     _isLogged(getUserId() != null);

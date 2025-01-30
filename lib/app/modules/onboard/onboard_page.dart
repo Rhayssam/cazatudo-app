@@ -3,9 +3,6 @@ import 'package:cazatudo_app/app/modules/onboard/onboard_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-// Rotas
-import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
-
 // UI
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
@@ -16,14 +13,53 @@ import 'package:video_player/video_player.dart';
 // Widgets Personalizados
 import 'package:cazatudo_app/app/core/widgets/primary_button.dart';
 
-class OnboardPage extends GetView<OnboardController> {
+class OnboardPage extends StatefulWidget {
   const OnboardPage({super.key});
 
   @override
+  State<OnboardPage> createState() => _OnboardPageState();
+}
+
+class _OnboardPageState extends State<OnboardPage> {
+  late VideoPlayerController videoPlayerController;
+
+  @override
+  void initState() {
+    super.initState();
+    _initPlayer();
+  }
+
+  void _initPlayer() async {
+    videoPlayerController = VideoPlayerController.asset(
+        'assets/videos/video_intro2.mp4',
+        videoPlayerOptions: VideoPlayerOptions(mixWithOthers: true))
+      ..initialize().then((_) {});
+
+    setState(() {
+      videoPlayerController.play();
+      videoPlayerController.setVolume(0);
+      videoPlayerController.setLooping(true);
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+// TODO Get.find
+  @override
   Widget build(BuildContext context) {
+    final controller = OnboardController();
     return Scaffold(
       body: Column(
         children: [
+          Expanded(
+            flex: 65,
+            child: Container(
+              child: VideoPlayer(videoPlayerController),
+            ),
+          ),
           Expanded(
             flex: 35,
             child: Container(

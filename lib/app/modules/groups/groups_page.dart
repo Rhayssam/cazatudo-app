@@ -1,7 +1,6 @@
 // Essenciais
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'dart:developer';
 
 // Controller
 import 'package:cazatudo_app/app/modules/groups/group_controller.dart';
@@ -84,8 +83,6 @@ class GroupsPage extends GetView<GroupController> {
                 delegate: SliverChildBuilderDelegate(
                   (context, index) {
                     final category = controller.sectors[index];
-                    log(category.toString());
-                    log(index.toString());
                     return NewCategoriesButton(
                       text: category.name,
                       onPressed: () {},
