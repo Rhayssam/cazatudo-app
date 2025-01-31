@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:cazatudo_app/app/core/app_routes/app_routes.dart';
 import 'package:cazatudo_app/app/core/constants/constants.dart';
 import 'package:get/get.dart';
@@ -20,10 +22,16 @@ class AuthService extends GetxService {
       }
     });
     _isLogged(getUserId() != null);
+    log('ID DO USUARIO LOGADO ${getUserId().toString()}');
     return this;
   }
 
   void logout() => _getStorage.write(Constants.USER_KEY, null);
 
-  int? getUserId() => _getStorage.read(Constants.USER_KEY);
+  int? getUserId() {
+    var user = _getStorage.read(Constants.USER_KEY);
+    return (user != null && user is Map<String, dynamic>)
+        ? user['id'] as int?
+        : null;
+  }
 }

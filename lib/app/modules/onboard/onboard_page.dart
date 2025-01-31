@@ -1,7 +1,6 @@
 // Essenciais
 import 'package:cazatudo_app/app/modules/onboard/onboard_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 // UI
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';

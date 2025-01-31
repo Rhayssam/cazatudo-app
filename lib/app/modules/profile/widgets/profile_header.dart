@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 // Essenciais
 import 'package:flutter/material.dart';
 
@@ -6,9 +7,13 @@ import 'package:cazatudo_app/app/core/ui/custom_text_styles.dart';
 import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 
 class ProfileHeader extends StatelessWidget {
-  const ProfileHeader({
-    super.key,
-  });
+  final String name;
+  final String email;
+  ProfileHeader({
+    Key? key,
+    required this.name,
+    required this.email,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +69,7 @@ class ProfileHeader extends StatelessWidget {
                   ),
                   child: Container(
                     child: Text(
-                      'Olá, <nome_do_usuario>',
+                      'Olá, $name',
                       //TODO Fazer a implementação do nome do usuário
                       style: CustomTextStyles.mediumText18
                           .copyWith(color: ThemeConfig.darkGrey),
@@ -87,7 +92,7 @@ class ProfileHeader extends StatelessWidget {
                           width: 5,
                         ),
                         Text(
-                          '<email>',
+                          '$email',
                           //TODO Fazer a implementação do nome do email
                           style: CustomTextStyles.smallText14.copyWith(
                             color: ThemeConfig.grey,

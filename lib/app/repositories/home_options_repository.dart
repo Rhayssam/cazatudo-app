@@ -14,7 +14,6 @@ class HomeOptionsRepository extends GetConnect {
 
   Future<List<HomeOptionsModel>> findAll() async {
     final result = await restClient.get('/homeOptions');
-    log(result.request!.url.toString());
     if (result.hasError) {
       throw Exception('Erro ao buscar opções da Home(${result.statusText})');
     }

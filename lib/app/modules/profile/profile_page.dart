@@ -1,5 +1,6 @@
 // Essenciais
 import 'package:cazatudo_app/app/core/services/auth_service.dart';
+import 'package:cazatudo_app/app/modules/profile/profile_controller.dart';
 import 'package:flutter/material.dart';
 
 // UI
@@ -9,11 +10,11 @@ import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 import 'package:cazatudo_app/app/core/widgets/sliver_app_bar.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_title.dart';
 // Widgets Personalizados
-import 'package:cazatudo_app/app/core/widgets/profile_header.dart';
+import 'package:cazatudo_app/app/modules/profile/widgets/profile_header.dart';
 import 'package:cazatudo_app/app/core/widgets/profile_options_button.dart';
 import 'package:get/get.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends GetView<ProfileController> {
   const ProfilePage({super.key});
 
   @override
@@ -28,7 +29,9 @@ class ProfilePage extends StatelessWidget {
               CustomAppBarTitle(title: 'Minha Conta'),
             ],
           ),
-          ProfileHeader(),
+          ProfileHeader(
+              name: controller.userName.value,
+              email: controller.userEmail.value),
           SliverToBoxAdapter(child: const SizedBox(height: 15)),
           ProfileOptionsButton(
             text: 'Meus Dados',

@@ -34,7 +34,11 @@ class SignUpController extends GetxController with LoaderMixin, MessagesMixin {
       _loading.toggle();
       final userLogged = await _authRepository.register(name, email, password);
       _loading.toggle();
-      GetStorage().write(Constants.USER_KEY, userLogged);
+      GetStorage().write(Constants.USER_KEY, {
+        'id': userLogged.id,
+        'name': userLogged.name,
+        'email': userLogged.email,
+      });
     } on RestClientException catch (e, s) {
       _loading.toggle();
       log('Erro ao registrar conta', error: e, stackTrace: s);

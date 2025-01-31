@@ -11,6 +11,12 @@
             "name": "Teste",
             "email": "teste1@email.com",
             "password": "123456"
+        },
+        {
+            "id": 3,
+            "name": "julie",
+            "email": "julie@gmail.com",
+            "password": "123456"
         }
     ],
     "group": [

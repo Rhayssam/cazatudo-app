@@ -14,7 +14,6 @@ class ProductRepository extends GetConnect {
 
   Future<List<ProductModel>> findAll() async {
     final result = await restClient.get('/product');
-    log(result.request!.url.toString());
     if (result.hasError) {
       throw Exception('Erro ao buscar Produto (${result.statusText})');
     }

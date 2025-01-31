@@ -14,7 +14,6 @@ class CategoryRepository extends GetConnect {
 
   Future<List<CategoryModel>> findAll() async {
     final result = await restClient.get('/categorias');
-    log(result.request!.url.toString());
     if (result.hasError) {
       throw Exception('Erro ao buscar Categoria (${result.statusText})');
     }

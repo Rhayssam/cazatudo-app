@@ -1,4 +1,5 @@
 // Essenciais
+import 'package:cazatudo_app/app/modules/profile/profile_controller.dart';
 import 'package:get/get.dart';
 
 // Controller
@@ -22,5 +23,8 @@ class NavigationBindings implements Bindings {
     //* Home
     Get.lazyPut(() => ProductRepository(restClient: Get.find()));
     Get.put(HomeController(repository: Get.find()));
+
+    //* Profile
+    Get.put(ProfileController());
   }
 }

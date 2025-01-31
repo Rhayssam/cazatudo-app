@@ -14,7 +14,6 @@ class GroupRepository extends GetConnect {
 
   Future<List<GroupModel>> findAll() async {
     final result = await restClient.get('/group');
-    log(result.request!.url.toString());
     if (result.hasError) {
       throw Exception('Erro ao buscar Grupo (${result.statusText})');
     }
