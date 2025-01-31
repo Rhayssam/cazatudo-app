@@ -13,12 +13,14 @@ class HorizontalProductsList extends StatefulWidget {
   final String texto;
   final double valorAntigo;
   final double valorPix;
+  final String imageProduct;
 
   const HorizontalProductsList({
     Key? key,
     required this.texto,
     required this.valorAntigo,
     required this.valorPix,
+    required this.imageProduct,
   }) : super(key: key);
 
   @override
@@ -119,7 +121,13 @@ class _HorizontalProductsListState extends State<HorizontalProductsList> {
           Container(
             width: 140,
             height: 140,
-            color: ThemeConfig.lightOrange,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: NetworkImage(widget.imageProduct),
+                fit: BoxFit.cover,
+              ),
+            ),
+            // color: ThemeConfig.lightOrange,
           ),
           Container(
             width: 180,

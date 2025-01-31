@@ -1,9 +1,11 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 // Essenciais
 import 'dart:convert';
 
 class ProductModel {
   int? id;
   String descricao;
+  String image;
   int categoria;
   int setor;
   double valorAnterior;
@@ -15,6 +17,7 @@ class ProductModel {
   ProductModel({
     this.id,
     required this.descricao,
+    required this.image,
     required this.categoria,
     required this.setor,
     required this.valorAnterior,
@@ -29,6 +32,7 @@ class ProductModel {
     return <String, dynamic>{
       'id': id,
       'descricao': descricao,
+      'image': image,
       'categoria': categoria,
       'setor': setor,
       'valorAnterior': valorAnterior,
@@ -44,6 +48,7 @@ class ProductModel {
     return ProductModel(
       id: map['id'] != null ? map['id'] as int : null,
       descricao: (map['descricao'] ?? '') as String,
+      image: (map['image'] ?? '') as String,
       categoria: (map['categoria'] ?? 0) as int,
       setor: (map['setor'] ?? 0) as int,
       valorAnterior: (map['valorAnterior'] ?? 0.0) as double,

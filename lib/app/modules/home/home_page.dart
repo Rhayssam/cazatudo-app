@@ -65,6 +65,7 @@ class HomePage extends GetView<HomeController> {
               return HorizontalList(
                 children: controller.products.map((product) {
                   return HorizontalProductsList(
+                    imageProduct: product.image,
                     texto: product.descricao,
                     valorAntigo: product.valorAnterior,
                     valorPix: product.valorPix,

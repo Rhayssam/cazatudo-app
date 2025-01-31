@@ -159,6 +159,7 @@
         {
             "id": 1,
             "descricao": "Sofá médio",
+            "image": "https://static.mobly.com.br/p/Estofart-SofC3A1-4-Lugares-ClC3A1ssico-com-Chaise-Esquerdo-Linho-Marrom-MC3A9dio-4808-210879-1.jpg",
             "categoria": 1,
             "setor": 1,
             "valorAnterior": 1000.0,
@@ -171,6 +172,7 @@
         {
             "id": 2,
             "descricao": "Cama de casal",
+            "image": "https://images.tcdn.com.br/img/img_prod/1083165/cama_box_casal_molas_tecnopedic_revolution_castor_138x188_5838_2_1d0bf80672cf0f836d8ca3ff2c5348c4.jpg",
             "categoria": 1,
             "setor": 4,
             "valorAnterior": 100.0,
@@ -183,6 +185,7 @@
         {
             "id": 3,
             "descricao": "Guarda roupa",
+            "image": "https://www.colchaocostarica.com.br/produtos/adicionais/31909-250106-guarda-roupa-casal-8-portas-e-4-gavetas-c-espelho-e-pes-nap.jpg",
             "categoria": 1,
             "setor": 4,
             "valorAnterior": 100.0,
