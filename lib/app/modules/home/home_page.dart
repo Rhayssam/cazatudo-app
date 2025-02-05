@@ -45,11 +45,26 @@ class HomePage extends GetView<HomeController> {
           TopicTitle(titulo: 'Categorias', color: ThemeConfig.orange1),
           HorizontalList(
             children: [
-              HorizontalCategoriesList(texto: 'Categorias'),
-              HorizontalCategoriesList(texto: 'Ofertas'),
-              HorizontalCategoriesList(texto: 'Relâmpago'),
-              HorizontalCategoriesList(texto: 'Cupons'),
-              HorizontalCategoriesList(texto: 'Frete'),
+              HorizontalCategoriesList(
+                texto: 'Categorias',
+                image: 'assets/images/menuCards/categorias.png',
+              ),
+              HorizontalCategoriesList(
+                texto: 'Ofertas',
+                image: 'assets/images/menuCards/ofertas.png',
+              ),
+              HorizontalCategoriesList(
+                texto: 'Relâmpago',
+                image: 'assets/images/menuCards/relampago.png',
+              ),
+              HorizontalCategoriesList(
+                texto: 'Cupons',
+                image: 'assets/images/menuCards/cupons.png',
+              ),
+              HorizontalCategoriesList(
+                texto: 'Frete',
+                image: 'assets/images/menuCards/frete.png',
+              ),
             ],
           ),
           TopicTitle(titulo: 'Novidades', color: ThemeConfig.orange1),

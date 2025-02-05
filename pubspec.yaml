@@ -31,6 +31,13 @@ flutter:
     - assets/images/cazatudo_logo_recort.png
     - assets/videos/video_intro1.mp4
     - assets/videos/video_intro2.mp4
+  # CategoriesMenuImages
+    - assets/images/menuCards/categorias.png
+    - assets/images/menuCards/ofertas.png
+    - assets/images/menuCards/relampago.png
+    - assets/images/menuCards/cupons.png
+    - assets/images/menuCards/frete.png
+
   fonts:
     - family: Inter
       fonts:

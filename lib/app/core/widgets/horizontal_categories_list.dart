@@ -7,9 +7,11 @@ import 'package:cazatudo_app/app/core/ui/theme_config.dart';
 
 class HorizontalCategoriesList extends StatelessWidget {
   final String texto;
+  final String image;
   const HorizontalCategoriesList({
     Key? key,
     required this.texto,
+    required this.image,
   }) : super(key: key);
 
   @override
@@ -24,6 +26,10 @@ class HorizontalCategoriesList extends StatelessWidget {
           height: 100,
           margin: const EdgeInsets.symmetric(horizontal: 8),
           decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(image),
+              fit: BoxFit.cover,
+            ),
             color: ThemeConfig.white,
             borderRadius: BorderRadius.circular(12),
             boxShadow: [
