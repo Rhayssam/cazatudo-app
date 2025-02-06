@@ -1,5 +1,7 @@
 // Essenciais
 import 'package:cazatudo_app/app/modules/profile/profile_controller.dart';
+import 'package:cazatudo_app/app/repositories/products/product_repository.dart';
+import 'package:cazatudo_app/app/repositories/products/product_repository_impl.dart';
 import 'package:get/get.dart';
 
 // Controller
@@ -9,7 +11,6 @@ import 'package:cazatudo_app/app/modules/home/home_controller.dart';
 
 // Repository
 import 'package:cazatudo_app/app/repositories/group_repository.dart';
-import 'package:cazatudo_app/app/repositories/product_repository.dart';
 
 class NavigationBindings implements Bindings {
   @override
@@ -21,8 +22,9 @@ class NavigationBindings implements Bindings {
     Get.put(GroupController(repository: Get.find()));
 
     //* Home
-    Get.lazyPut(() => ProductRepository(restClient: Get.find()));
-    Get.put(HomeController(repository: Get.find()));
+    Get.lazyPut<ProductRepository>(
+        () => ProductRepositoryImpl(restClient: Get.find()));
+    Get.put(HomeController(productRepository: Get.find()));
 
     //* Profile
     Get.put(ProfileController());

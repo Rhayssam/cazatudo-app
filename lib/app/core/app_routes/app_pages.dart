@@ -2,6 +2,7 @@
 import 'package:cazatudo_app/app/modules/auth/login/login_bindings.dart';
 import 'package:cazatudo_app/app/modules/auth/sign_up/sign_up_bindings.dart';
 import 'package:cazatudo_app/app/modules/onboard/onboard_bindings.dart';
+import 'package:cazatudo_app/app/modules/product/product_bindings.dart';
 import 'package:cazatudo_app/app/modules/profile/profile_bindings.dart';
 import 'package:get/get.dart';
 
@@ -84,6 +85,7 @@ class AppPages {
     GetPage(
       name: AppRoutes.product,
       page: () => ProductPage(),
+      binding: ProductBindings(),
     ),
   ];
 }

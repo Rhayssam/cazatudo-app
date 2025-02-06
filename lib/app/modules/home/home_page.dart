@@ -1,4 +1,5 @@
 // Essenciais
+import 'package:cazatudo_app/app/modules/home/widgets/product_tile.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 // Controller
@@ -12,11 +13,11 @@ import 'package:cazatudo_app/app/core/widgets/sliver_app_bar.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_search.dart';
 import 'package:cazatudo_app/app/core/widgets/custom_app_bar_icon.dart';
 // Widgets Personalizados
-import 'package:cazatudo_app/app/core/widgets/horizontal_products_list.dart';
+import 'package:cazatudo_app/app/modules/home/widgets/horizontal_products_list.dart';
 import 'package:cazatudo_app/app/core/widgets/horizontal_list.dart';
 import 'package:cazatudo_app/app/core/widgets/banner_widget.dart';
 import 'package:cazatudo_app/app/core/widgets/topic_title.dart';
-import 'package:cazatudo_app/app/core/widgets/horizontal_categories_list.dart';
+import 'package:cazatudo_app/app/modules/home/widgets/horizontal_categories_list.dart';
 
 class HomePage extends GetView<HomeController> {
   const HomePage({super.key});
@@ -41,7 +42,9 @@ class HomePage extends GetView<HomeController> {
               const SizedBox(width: 15),
             ],
           ),
-          BannerWidget(pageController: _controlPage),
+          //* BANNER
+          BannerWidget(pageController: controller.controlPage),
+          //* CATEGORIAS
           TopicTitle(titulo: 'Categorias', color: ThemeConfig.orange1),
           HorizontalList(
             children: [
@@ -67,25 +70,23 @@ class HomePage extends GetView<HomeController> {
               ),
             ],
           ),
+          //* PRODUCTS LIST
           TopicTitle(titulo: 'Novidades', color: ThemeConfig.orange1),
           Obx(
             () {
-              if (controller.products.isEmpty) {
-                return SliverToBoxAdapter(
-                  child: Center(
-                    child: Text('Nenhum produto disponível'),
+              return SliverToBoxAdapter(
+                child: SizedBox(
+                  height: 270, // Defina um tamanho adequado para os itens
+                  child: ListView.builder(
+                    scrollDirection:
+                        Axis.horizontal, // Define a rolagem horizontal
+                    itemCount: controller.menu.length,
+                    itemBuilder: (context, index) {
+                      final prod = controller.menu[index];
+                      return HorizontalProductsList(product: prod);
+                    },
                   ),
-                );
-              }
-              return HorizontalList(
-                children: controller.products.map((product) {
-                  return HorizontalProductsList(
-                    imageProduct: product.image,
-                    texto: product.descricao,
-                    valorAntigo: product.valorAnterior,
-                    valorPix: product.valorPix,
-                  );
-                }).toList(),
+                ),
               );
             },
           ),
@@ -94,5 +95,3 @@ class HomePage extends GetView<HomeController> {
     );
   }
 }
-
-final _controlPage = PageController();
